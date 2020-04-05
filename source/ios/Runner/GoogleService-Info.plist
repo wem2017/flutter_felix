@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:226623043329:ios:84104a07fe818de199cd00</string>
+	<string>1:226623043329:ios:5a7b4c227452f63199cd00</string>
 	<key>DATABASE_URL</key>
 	<string>https://felixflutter.firebaseio.com</string>
 </dict>
