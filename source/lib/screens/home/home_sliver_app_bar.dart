@@ -1,90 +1,131 @@
-import 'package:flutter/material.dart';
 import 'package:felix_flutter/configs/config.dart';
 import 'package:felix_flutter/models/model.dart';
+import 'package:felix_flutter/screens/home/home_category_item.dart';
 import 'package:felix_flutter/screens/home/home_swiper.dart';
 import 'package:felix_flutter/utils/utils.dart';
+import 'package:flutter/material.dart';
 
 class AppBarHomeSliver extends SliverPersistentHeaderDelegate {
   final double expandedHeight;
   final List<ImageModel> banners;
+  final List<CategoryModel> category;
+  final Function(CategoryModel) onPress;
 
-  AppBarHomeSliver({this.expandedHeight, this.banners});
+  AppBarHomeSliver({
+    this.expandedHeight,
+    this.banners,
+    this.category,
+    this.onPress,
+  });
 
   @override
   Widget build(context, shrinkOffset, overlapsContent) {
     return Stack(
       alignment: Alignment.bottomCenter,
       children: [
-        Padding(
-          padding: EdgeInsets.only(bottom: 5),
-          child: HomeSwipe(
-            images: banners,
-            height: expandedHeight,
-          ),
-        ),
-        Container(
-          height: 35,
-          color: Theme.of(context).scaffoldBackgroundColor,
+        Column(
+          children: <Widget>[
+            Container(
+              height: 190,
+              child: HomeSwipe(images: banners),
+            ),
+            Container(),
+          ],
         ),
         SafeArea(
-          child: Container(
-            padding: EdgeInsets.only(left: 20, right: 20, bottom: 10),
-            child: Card(
-              margin: EdgeInsets.all(0),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
-              ),
-              elevation: 3,
-              child: Container(
-                padding: EdgeInsets.all(10),
-                child: FlatButton(
-                  padding: EdgeInsets.all(0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: <Widget>[
+              Container(
+                padding: EdgeInsets.only(left: 20, right: 20),
+                child: Card(
+                  margin: EdgeInsets.all(0),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(8),
                   ),
-                  onPressed: () {
-                    Navigator.pushNamed(context, Routes.searchHistory);
-                  },
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Theme.of(context).hoverColor,
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(8),
-                      ),
-                    ),
-                    child: Padding(
-                      padding: EdgeInsets.all(10),
-                      child: IntrinsicHeight(
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: <Widget>[
-                            Expanded(
-                              child: Text(
-                                Translate.of(context).translate(
-                                  'search_location',
-                                ),
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .subtitle
-                                    .copyWith(fontWeight: FontWeight.w500),
+                  elevation: 3,
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                        padding: EdgeInsets.only(left: 8, right: 8, top: 8),
+                        child: FlatButton(
+                          padding: EdgeInsets.all(0),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          onPressed: () {
+                            Navigator.pushNamed(context, Routes.searchHistory);
+                          },
+                          child: Container(
+                            padding: EdgeInsets.only(
+                              left: 8,
+                              right: 8,
+                              top: 16,
+                              bottom: 16,
+                            ),
+                            decoration: BoxDecoration(
+                              color: Theme.of(context).hoverColor,
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(8),
                               ),
                             ),
-                            VerticalDivider(),
-                            Icon(
-                              Icons.location_on,
-                              color: Theme.of(context).primaryColor,
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: <Widget>[
+                                Text(
+                                  Translate.of(context).translate(
+                                    'what_are_you_looking_for',
+                                  ),
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .subhead
+                                      .copyWith(fontWeight: FontWeight.w600),
+                                ),
+                              ],
                             ),
-                          ],
+                          ),
                         ),
                       ),
-                    ),
+                      Padding(
+                        padding: EdgeInsets.only(top: 8, bottom: 8),
+                        child: _buildCategory(),
+                      ),
+                    ],
                   ),
                 ),
               ),
-            ),
+            ],
           ),
         ),
       ],
+    );
+  }
+
+  ///Build category UI
+  Widget _buildCategory() {
+    if (category == null) {
+      return Wrap(
+        runSpacing: 8,
+        alignment: WrapAlignment.center,
+        children: List.generate(8, (index) => index).map(
+          (item) {
+            return HomeCategoryItem();
+          },
+        ).toList(),
+      );
+    }
+
+    return Wrap(
+      runSpacing: 8,
+      alignment: WrapAlignment.center,
+      children: category.map(
+        (item) {
+          return HomeCategoryItem(
+            item: item,
+            onPressed: onPress,
+          );
+        },
+      ).toList(),
     );
   }
 
@@ -92,7 +133,7 @@ class AppBarHomeSliver extends SliverPersistentHeaderDelegate {
   double get maxExtent => expandedHeight;
 
   @override
-  double get minExtent => 110;
+  double get minExtent => expandedHeight;
 
   @override
   bool shouldRebuild(SliverPersistentHeaderDelegate oldDelegate) => true;

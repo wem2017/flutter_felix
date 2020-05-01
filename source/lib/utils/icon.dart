@@ -42,6 +42,20 @@ class UtilIcon {
         return Icons.sort;
       case "swap_vert":
         return Icons.swap_vert;
+      case 'hotel':
+        return Icons.hotel;
+      case 'location_on':
+        return Icons.location_on;
+      case 'directions_car':
+        return Icons.directions_car;
+      case 'flight':
+        return Icons.flight;
+      case 'directions_boat':
+        return Icons.directions_boat;
+      case 'event':
+        return Icons.event;
+      case 'description':
+        return Icons.description;
       default:
         return Icons.help;
     }

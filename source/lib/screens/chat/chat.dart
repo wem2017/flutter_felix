@@ -1,17 +1,19 @@
-import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:intl/intl.dart';
 import 'package:felix_flutter/api/api.dart';
 import 'package:felix_flutter/models/model.dart';
+import 'package:felix_flutter/models/screen_models/chat_page_model.dart';
+import 'package:felix_flutter/models/screen_models/screen_models.dart';
 import 'package:felix_flutter/screens/chat/chat_item.dart';
 import 'package:felix_flutter/utils/utils.dart';
 import 'package:felix_flutter/widgets/widget.dart';
+import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:intl/intl.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 class Chat extends StatefulWidget {
-  final UserModel user;
+  final int id;
 
-  Chat({this.user});
+  Chat({this.id});
 
   @override
   _ChatState createState() => _ChatState();
@@ -20,7 +22,9 @@ class Chat extends StatefulWidget {
 class _ChatState extends State<Chat> {
   final _controller = RefreshController(initialRefresh: false);
   final _textChatController = TextEditingController();
+
   bool _loading = true;
+  ChatPageModel _chatPage;
   List<MessageModel> _message;
 
   @override
@@ -31,13 +35,11 @@ class _ChatState extends State<Chat> {
 
   ///Fetch API
   Future<void> _loadData() async {
-    final ResultApiModel result = await Api.getDetailMessage();
+    final ResultApiModel result = await Api.getDetailMessage(id: widget.id);
     if (result.success) {
-      final Iterable convertMessage = result.data['message'] ?? [];
       setState(() {
-        _message = convertMessage.map((item) {
-          return MessageModel.fromJson(item);
-        }).toList();
+        _chatPage = ChatPageModel.fromJson(result.data);
+        _message = _chatPage.message;
         _loading = false;
       });
     }
@@ -49,7 +51,6 @@ class _ChatState extends State<Chat> {
     if (image != null) {
       final chat = MessageModel.fromJson({
         "id": 10,
-        "from": {"id": 3},
         "date": DateFormat.jm().format(DateTime.now()),
         "file": image.path,
         "status": "sent"
@@ -77,7 +78,6 @@ class _ChatState extends State<Chat> {
   void _onSend() {
     final chat = MessageModel.fromJson({
       "id": 6,
-      "from": {"id": 3, "level": "", "description": ""},
       "message": _textChatController.text,
       "date": DateFormat.jm().format(DateTime.now()),
       "status": "sent"
@@ -89,6 +89,49 @@ class _ChatState extends State<Chat> {
     }
     _textChatController.text = '';
     UtilOther.hiddenKeyboard(context);
+  }
+
+  ///Build info Room
+  Widget _buildInfo() {
+    if (_chatPage?.member == null) {
+      return null;
+    }
+
+    return Row(
+      children: <Widget>[
+        AppGroupCircleAvatar(
+          member: _chatPage.member,
+          size: 48,
+        ),
+        SizedBox(width: 10),
+        Expanded(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Text(
+                _chatPage.roomName,
+                style: Theme.of(context)
+                    .textTheme
+                    .subhead
+                    .copyWith(color: Colors.white, fontWeight: FontWeight.w600),
+                overflow: TextOverflow.ellipsis,
+                maxLines: 1,
+              ),
+              _chatPage.online > 0
+                  ? Text(
+                      '${_chatPage.online > 1 ? _chatPage.online : ''} Online',
+                      style: Theme.of(context)
+                          .textTheme
+                          .subtitle
+                          .apply(color: Theme.of(context).primaryColorLight),
+                    )
+                  : Container()
+            ],
+          ),
+        )
+      ],
+    );
   }
 
   ///Build Content
@@ -220,36 +263,7 @@ class _ChatState extends State<Chat> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Row(
-          children: <Widget>[
-            AppCircleAvatar(
-              imgUrl: widget.user.image,
-            ),
-            SizedBox(width: 10),
-            Expanded(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    widget.user.name,
-                    style: Theme.of(context).textTheme.subhead.copyWith(
-                        color: Colors.white, fontWeight: FontWeight.w600),
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 1,
-                  ),
-                  Text(
-                    "Online",
-                    style: Theme.of(context)
-                        .textTheme
-                        .subtitle
-                        .apply(color: Theme.of(context).primaryColorLight),
-                  )
-                ],
-              ),
-            )
-          ],
-        ),
+        title: _buildInfo(),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.phone),

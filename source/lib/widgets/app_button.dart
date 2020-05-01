@@ -5,6 +5,7 @@ class AppButton extends StatelessWidget {
   final String text;
   final bool loading;
   final bool disableTouchWhenLoading;
+  final ShapeBorder shape;
 
   AppButton({
     Key key,
@@ -12,6 +13,7 @@ class AppButton extends StatelessWidget {
     this.text,
     this.loading = false,
     this.disableTouchWhenLoading = false,
+    this.shape,
   }) : super(key: key);
 
   Widget _buildLoading() {
@@ -29,6 +31,7 @@ class AppButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RaisedButton(
+      shape: shape,
       onPressed: disableTouchWhenLoading && loading ? null : onPressed,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,

@@ -4,7 +4,7 @@ class NotificationModel {
   final int id;
   final String title;
   final String subtitle;
-  final String date;
+  final DateTime date;
   final CategoryModel category;
 
   NotificationModel(
@@ -20,7 +20,7 @@ class NotificationModel {
       json['id'] as int,
       json['title'] as String,
       json['subtitle'] as String,
-      json['date'] as String,
+      DateTime.tryParse(json['date']) ?? DateTime.now(),
       new CategoryModel.fromJson(json['category']),
     );
   }

@@ -1,5 +1,8 @@
-import 'package:flutter/material.dart';
+import 'package:felix_flutter/configs/config.dart';
 import 'package:felix_flutter/models/model.dart';
+import 'package:felix_flutter/widgets/widget.dart';
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:shimmer/shimmer.dart';
 
 class AppMessageItem extends StatelessWidget {
@@ -72,7 +75,7 @@ class AppMessageItem extends StatelessWidget {
     return InkWell(
       onTap: onPressed,
       child: Container(
-        padding: EdgeInsets.only(top: 10, bottom: 10, left: 20, right: 20),
+        padding: EdgeInsets.only(top: 8, bottom: 8, left: 20, right: 20),
         decoration: BoxDecoration(
           border: border
               ? Border(
@@ -86,17 +89,13 @@ class AppMessageItem extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Container(
-              width: 48,
-              height: 48,
-              child: Image.asset(
-                item.from.image,
-                fit: BoxFit.cover,
-              ),
+            AppGroupCircleAvatar(
+              size: 48,
+              member: item.member,
             ),
             Expanded(
               child: Container(
-                padding: EdgeInsets.only(left: 10, right: 10),
+                padding: EdgeInsets.only(left: 8, right: 8),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -106,7 +105,7 @@ class AppMessageItem extends StatelessWidget {
                       children: <Widget>[
                         Expanded(
                           child: Text(
-                            item.from.name,
+                            item.roomName,
                             maxLines: 1,
                             style: Theme.of(context)
                                 .textTheme
@@ -115,7 +114,10 @@ class AppMessageItem extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          item.date,
+                          DateFormat(
+                            'EEE MMM d yyyy',
+                            AppLanguage.defaultLanguage.languageCode,
+                          ).format(item.date),
                           style: Theme.of(context).textTheme.caption,
                         )
                       ],

@@ -2,22 +2,24 @@ import 'package:flutter/material.dart';
 
 class AppCircleAvatar extends StatelessWidget {
   final String imgUrl;
+  final double size;
 
   const AppCircleAvatar({
     Key key,
     @required this.imgUrl,
+    this.size = 40.0,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 40,
-      height: 40,
+      width: size,
+      height: size,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         border: Border.all(
           color: Colors.white,
-          width: 3,
+          width: 2,
         ),
         boxShadow: [
           BoxShadow(
@@ -26,9 +28,10 @@ class AppCircleAvatar extends StatelessWidget {
             blurRadius: 5,
           )
         ],
-      ),
-      child: CircleAvatar(
-        backgroundImage: AssetImage(imgUrl),
+        image: DecorationImage(
+          image: AssetImage(imgUrl),
+          fit: BoxFit.cover,
+        ),
       ),
     );
   }

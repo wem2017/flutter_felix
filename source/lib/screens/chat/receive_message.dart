@@ -1,6 +1,8 @@
-import 'package:flutter/material.dart';
+import 'package:felix_flutter/configs/config.dart';
 import 'package:felix_flutter/models/model.dart';
 import 'package:felix_flutter/widgets/widget.dart';
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class ReceiveMessage extends StatelessWidget {
   final MessageModel item;
@@ -61,7 +63,10 @@ class ReceiveMessage extends StatelessWidget {
             ),
           ),
           Text(
-            item.date,
+            DateFormat(
+              'EEE MMM d yyyy',
+              AppLanguage.defaultLanguage.languageCode,
+            ).format(item.date),
             style: Theme.of(context).textTheme.body2,
           ),
         ],

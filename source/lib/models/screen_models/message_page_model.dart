@@ -10,12 +10,12 @@ class MessagePageModel {
   factory MessagePageModel.fromJson(Map<String, dynamic> json) {
     final Iterable convertMessage = json['message'] ?? [];
 
-    final listCategory = convertMessage.map((item) {
+    final listMessage = convertMessage.map((item) {
       return MessageModel.fromJson(item);
     }).toList();
 
     return MessagePageModel(
-      listCategory,
+      listMessage,
     );
   }
 }

@@ -70,10 +70,18 @@ class Api {
     return ResultApiModel.fromJson(result);
   }
 
-  ///Get Detail Messages
-  static Future<dynamic> getDetailMessage() async {
+  ///Get Messages
+  static Future<dynamic> getBookingHistory() async {
     await Future.delayed(Duration(seconds: 1));
-    final result = await UtilAsset.loadJson("assets/data/message_detail.json");
+    final result = await UtilAsset.loadJson("assets/data/booking_history.json");
+    return ResultApiModel.fromJson(result);
+  }
+
+  ///Get Detail Messages
+  static Future<dynamic> getDetailMessage({int id}) async {
+    await Future.delayed(Duration(seconds: 1));
+    final result =
+        await UtilAsset.loadJson("assets/data/message_detail_${id}.json");
     return ResultApiModel.fromJson(result);
   }
 

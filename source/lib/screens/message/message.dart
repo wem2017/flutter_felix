@@ -1,11 +1,11 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:felix_flutter/api/api.dart';
 import 'package:felix_flutter/configs/config.dart';
 import 'package:felix_flutter/models/model.dart';
 import 'package:felix_flutter/models/screen_models/message_page_model.dart';
 import 'package:felix_flutter/utils/utils.dart';
 import 'package:felix_flutter/widgets/app_message_item.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 class MessageList extends StatefulWidget {
@@ -34,7 +34,7 @@ class _MessageListState extends State<MessageList> {
     final ResultApiModel result = await Api.getMessage();
     if (result.success) {
       setState(() {
-        _messagePage = new MessagePageModel.fromJson(result.data);
+        _messagePage = MessagePageModel.fromJson(result.data);
       });
     }
   }
@@ -53,7 +53,7 @@ class _MessageListState extends State<MessageList> {
 
   ///On navigate chat screen
   void _onChat(MessageModel item) {
-    Navigator.pushNamed(context, Routes.chat, arguments: item.from);
+    Navigator.pushNamed(context, Routes.chat, arguments: item.id);
   }
 
   ///Build list
@@ -110,7 +110,7 @@ class _MessageListState extends State<MessageList> {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          Translate.of(context).translate('message'),
+          Translate.of(context).translate('messages'),
         ),
       ),
       body: SafeArea(

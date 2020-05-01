@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:felix_flutter/models/model.dart';
 import 'package:felix_flutter/utils/utils.dart';
+import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
 class HomeCategoryItem extends StatelessWidget {
@@ -39,10 +39,7 @@ class HomeCategoryItem extends StatelessWidget {
                 padding: EdgeInsets.only(top: 3),
                 child: Text(
                   Translate.of(context).translate('loading'),
-                  style: Theme.of(context)
-                      .textTheme
-                      .caption
-                      .copyWith(fontWeight: FontWeight.bold),
+                  style: Theme.of(context).textTheme.button,
                 ),
               ),
             ],
@@ -76,11 +73,8 @@ class HomeCategoryItem extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(top: 3),
               child: Text(
-                item.title,
-                style: Theme.of(context)
-                    .textTheme
-                    .caption
-                    .copyWith(fontWeight: FontWeight.w500),
+                Translate.of(context).translate(item.title),
+                style: Theme.of(context).textTheme.button,
               ),
             ),
           ],

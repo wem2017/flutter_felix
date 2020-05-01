@@ -3,21 +3,24 @@ import 'package:felix_flutter/models/model.dart';
 class HomePageModel {
   final List<ImageModel> banner;
   final List<CategoryModel> category;
-  final List<ProductModel> popular;
-  final List<ProductModel> list;
+  final List<HotelModel> promotion;
+  final List<TourModel> tour;
+  final List<EventModel> event;
 
   HomePageModel(
     this.banner,
     this.category,
-    this.popular,
-    this.list,
+    this.promotion,
+    this.tour,
+    this.event,
   );
 
   factory HomePageModel.fromJson(Map<String, dynamic> json) {
     final Iterable refactorBanner = json['banner'] ?? [];
     final Iterable refactorCategory = json['category'] ?? [];
-    final Iterable refactorPopular = json['popular'] ?? [];
-    final Iterable refactorList = json['list'] ?? [];
+    final Iterable refactorPromotion = json['promotion'] ?? [];
+    final Iterable refactorTour = json['tour'] ?? [];
+    final Iterable refactorEvent = json['event'] ?? [];
 
     final listBanner = refactorBanner.map((item) {
       return ImageModel.fromJson(item);
@@ -27,19 +30,24 @@ class HomePageModel {
       return CategoryModel.fromJson(item);
     }).toList();
 
-    final listPopular = refactorPopular.map((item) {
-      return ProductModel.fromJson(item);
+    final listPromotion = refactorPromotion.map((item) {
+      return HotelModel.fromJson(item);
     }).toList();
 
-    final listProduct = refactorList.map((item) {
-      return ProductModel.fromJson(item);
+    final listTour = refactorTour.map((item) {
+      return TourModel.fromJson(item);
+    }).toList();
+
+    final listEvent = refactorEvent.map((item) {
+      return EventModel.fromJson(item);
     }).toList();
 
     return HomePageModel(
       listBanner,
       listCategory,
-      listPopular,
-      listProduct,
+      listPromotion,
+      listTour,
+      listEvent,
     );
   }
 }

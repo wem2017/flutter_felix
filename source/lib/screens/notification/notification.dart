@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
 import 'package:felix_flutter/api/api.dart';
 import 'package:felix_flutter/models/model.dart';
 import 'package:felix_flutter/models/screen_models/screen_models.dart';
 import 'package:felix_flutter/utils/utils.dart';
 import 'package:felix_flutter/widgets/widget.dart';
+import 'package:flutter/material.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 class NotificationList extends StatefulWidget {
@@ -79,12 +79,8 @@ class _NotificationListState extends State<NotificationList> {
             padding: EdgeInsets.only(left: 20, right: 20),
             color: Theme.of(context).accentColor,
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
-                Icon(
-                  Icons.delete,
-                  color: Colors.white,
-                ),
                 Icon(
                   Icons.delete,
                   color: Colors.white,

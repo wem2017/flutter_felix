@@ -1,5 +1,7 @@
-import 'package:flutter/material.dart';
+import 'package:felix_flutter/configs/config.dart';
 import 'package:felix_flutter/models/model.dart';
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class SendMessage extends StatelessWidget {
   final MessageModel item;
@@ -14,7 +16,10 @@ class SendMessage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
           Text(
-            item.date,
+            DateFormat(
+              'EEE MMM d yyyy',
+              AppLanguage.defaultLanguage.languageCode,
+            ).format(item.date),
             style: Theme.of(context).textTheme.body2,
           ),
           SizedBox(width: 8),

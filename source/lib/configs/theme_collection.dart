@@ -118,6 +118,11 @@ class CollectionTheme {
               ),
             ),
           ),
+          cardTheme: CardTheme(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
+            ),
+          ),
         );
       case "primaryDark":
         return ThemeData(
@@ -244,6 +249,11 @@ class CollectionTheme {
               ),
             ),
           ),
+          cardTheme: CardTheme(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
+            ),
+          ),
         );
       case "brownLight":
         return ThemeData(
@@ -354,6 +364,11 @@ class CollectionTheme {
               borderRadius: BorderRadius.all(
                 Radius.circular(8),
               ),
+            ),
+          ),
+          cardTheme: CardTheme(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
             ),
           ),
         );
@@ -482,6 +497,11 @@ class CollectionTheme {
               ),
             ),
           ),
+          cardTheme: CardTheme(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
+            ),
+          ),
         );
       case "pinkLight":
         return ThemeData(
@@ -592,6 +612,11 @@ class CollectionTheme {
               borderRadius: BorderRadius.all(
                 Radius.circular(8),
               ),
+            ),
+          ),
+          cardTheme: CardTheme(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
             ),
           ),
         );
@@ -720,6 +745,11 @@ class CollectionTheme {
               ),
             ),
           ),
+          cardTheme: CardTheme(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
+            ),
+          ),
         );
       case "pastelOrangeLight":
         return ThemeData(
@@ -830,6 +860,11 @@ class CollectionTheme {
               borderRadius: BorderRadius.all(
                 Radius.circular(8),
               ),
+            ),
+          ),
+          cardTheme: CardTheme(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
             ),
           ),
         );
@@ -957,6 +992,11 @@ class CollectionTheme {
               ),
             ),
           ),
+          cardTheme: CardTheme(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
+            ),
+          ),
         );
       case "greenLight":
         return ThemeData(
@@ -1067,6 +1107,11 @@ class CollectionTheme {
               borderRadius: BorderRadius.all(
                 Radius.circular(8),
               ),
+            ),
+          ),
+          cardTheme: CardTheme(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
             ),
           ),
         );
@@ -1195,6 +1240,11 @@ class CollectionTheme {
               ),
             ),
           ),
+          cardTheme: CardTheme(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
+            ),
+          ),
         );
 
       default:
@@ -1306,6 +1356,11 @@ class CollectionTheme {
               borderRadius: BorderRadius.all(
                 Radius.circular(8),
               ),
+            ),
+          ),
+          cardTheme: CardTheme(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
             ),
           ),
         );

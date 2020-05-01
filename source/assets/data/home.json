@@ -2,333 +2,205 @@
   "success": true,
   "data": {
     "banner": [
-      { "id": 1, "image": "assets/images/banner-3.jpg" },
+      { "id": 1, "image": "assets/images/trip-3.jpg" },
       { "id": 2, "image": "assets/images/trip-2.jpg" },
-      { "id": 3, "image": "assets/images/trip-3.jpg" }
+      { "id": 3, "image": "assets/images/trip-1.jpg" }
     ],
     "category": [
       {
         "id": 1,
-        "name": "Shopping",
-        "count": 52,
-        "image": "assets/images/category-1.jpg",
-        "icon": "shopping_basket",
+        "title": "hotel",
+        "icon": "hotel",
         "color": "#ff8a65",
-        "type": "shop"
+        "type": "hotel"
       },
       {
         "id": 2,
-        "name": "Coffee & Bar",
-        "count": 54,
-        "image": "assets/images/category-2.jpg",
-        "icon": "local_drink",
+        "title": "tour",
+        "icon": "location_on",
         "color": "#5d6d7e",
-        "type": "drink"
+        "type": "tour"
       },
       {
         "id": 3,
-        "name": "Events",
-        "count": 32,
-        "image": "assets/images/category-3.jpg",
-        "icon": "event_available",
+        "title": "car",
+        "icon": "directions_car",
         "color": "#a569bd",
+        "type": "car"
+      },
+      {
+        "id": 4,
+        "title": "flight",
+        "icon": "flight",
+        "color": "#5dade2",
+        "type": "flight"
+      },
+      {
+        "id": 5,
+        "title": "cruise",
+        "icon": "directions_boat",
+        "color": "#4a90a4",
+        "type": "cruise"
+      },
+      {
+        "id": 6,
+        "title": "bus",
+        "icon": "directions_bus",
+        "color": "#58d68d",
+        "type": "bus"
+      },
+      {
+        "id": 7,
+        "title": "event",
+        "icon": "event",
+        "color": "#fdc60a",
+        "type": "event"
+      },
+      {
+        "id": 8,
+        "title": "news",
+        "icon": "description",
+        "color": "#ff8a65",
+        "type": "news"
+      }
+    ],
+    "promotion": [
+      {
+        "id": 1,
+        "title": "Orient Express",
+        "subtitle": "Luxury",
+        "image": "assets/images/hotel-01.jpg",
+        "type": "hotel"
+      },
+      {
+        "id": 2,
+        "title": "Mantis",
+        "subtitle": "Premium",
+        "image": "assets/images/hotel-02.jpg",
+        "type": "hotel"
+      },
+      {
+        "id": 3,
+        "title": "Mantra",
+        "subtitle": "Midscale",
+        "image": "assets/images/hotel-03.jpg",
+        "type": "hotel"
+      },
+      {
+        "id": 4,
+        "title": "Breakfree",
+        "subtitle": "Economy",
+        "image": "assets/images/hotel-04.jpg",
+        "type": "hotel"
+      },
+      {
+        "id": 5,
+        "title": "CHome Inns",
+        "subtitle": "Budget",
+        "image": "assets/images/hotel-05.jpg",
+        "type": "hotel"
+      }
+    ],
+    "tour": [
+      {
+        "id": 1,
+        "title": "Vietnam",
+        "image": "assets/images/trip-1.jpg",
+        "type": "tour"
+      },
+      {
+        "id": 2,
+        "title": "Morocco",
+        "image": "assets/images/trip-2.jpg",
+        "type": "tour"
+      },
+      {
+        "id": 3,
+        "title": "India",
+        "image": "assets/images/trip-3.jpg",
+        "type": "tour"
+      },
+      {
+        "id": 4,
+        "title": "Peru",
+        "image": "assets/images/trip-4.jpg",
+        "type": "tour"
+      },
+      {
+        "id": 5,
+        "title": "Egypt",
+        "image": "assets/images/trip-5.jpg",
+        "type": "tour"
+      },
+      {
+        "id": 6,
+        "title": "Sri Lanka",
+        "image": "assets/images/trip-6.jpg",
+        "type": "tour"
+      },
+      {
+        "id": 7,
+        "title": "Cuba",
+        "image": "assets/images/trip-7.jpg",
+        "type": "tour"
+      }
+    ],
+    "event": [
+      {
+        "id": 1,
+        "title": "Music festivals",
+        "image": "assets/images/event-1.jpg",
+        "address": "The Ansonia, 2109 Broadway, Upper West Side",
+        "start_time": "2019-02-27 13:27:00",
+        "type": "event"
+      },
+      {
+        "id": 2,
+        "title": "Food festivals",
+        "image": "assets/images/event-2.jpg",
+        "address": "66 Perry Street, West Village",
+        "start_time": "2019-02-20 13:00:00",
+        "type": "event"
+      },
+      {
+        "id": 3,
+        "title": "Comedy events",
+        "image": "assets/images/event-3.jpg",
+        "address": "169 E 71st St, Lenox Hill",
+        "start_time": "2019-01-27 08:27:00",
         "type": "event"
       },
       {
         "id": 4,
-        "name": "Real Estate",
-        "count": 12,
-        "image": "assets/images/category-4.jpg",
-        "icon": "all_inclusive",
-        "color": "#5dade2",
-        "type": "estate"
+        "title": "Sports events",
+        "image": "assets/images/event-4.jpg",
+        "address": "36 Fuller Place, Brooklyn",
+        "start_time": "2019-04-27 07:27:00",
+        "type": "event"
       },
       {
         "id": 5,
-        "name": "Job Street",
-        "count": 54,
-        "image": "assets/images/location-1.jpg",
-        "icon": "card_travel",
-        "color": "#4a90a4",
-        "type": "job"
+        "title": "Conferences",
+        "image": "assets/images/event-5.jpg",
+        "address": "The Dakota, 1 W 72nd St, Upper West Side",
+        "start_time": "2019-01-20 10:27:00",
+        "type": "event"
       },
       {
         "id": 6,
-        "name": "Restaurant",
-        "count": 63,
-        "image": "assets/images/location-2.jpg",
-        "icon": "restaurant",
-        "color": "#58d68d",
-        "type": "restaurant"
+        "title": "Fundraisers",
+        "image": "assets/images/event-6.jpg",
+        "address": "Fifth Ave at 87th St, Upper East Side",
+        "start_time": "2019-01-20 10:27:00",
+        "type": "event"
       },
       {
         "id": 7,
-        "name": "Automotive",
-        "count": 22,
-        "image": "assets/images/location-3.jpg",
-        "icon": "directions_car",
-        "color": "#fdc60a",
-        "type": "automotive"
-      }
-    ],
-    "popular": [
-      {
-        "id": 1,
-        "title": "Michigan",
-        "subtitle": "Arts & Humanities",
-        "image": "assets/images/place-1.jpg"
-      },
-      {
-        "id": 2,
-        "title": "Colorado",
-        "subtitle": "Arts & Humanities",
-        "image": "assets/images/place-2.jpg"
-      },
-      {
-        "id": 3,
-        "title": "Utah",
-        "subtitle": "Arts & Humanities",
-        "image": "assets/images/trip-6.jpg"
-      },
-      {
-        "id": 4,
-        "title": "King Utah",
-        "subtitle": "Arts & Humanities",
-        "image": "assets/images/trip-4.jpg"
-      },
-      {
-        "id": 5,
-        "title": "Colorado King",
-        "subtitle": "Arts & Humanities",
-        "image": "assets/images/trip-5.jpg"
-      }
-    ],
-    "list": [
-      {
-        "id": 1,
-        "type": "hotel",
-        "title": "Lounge Coffee Bar",
-        "subtitle": "Arts & Humanities",
-        "image": "assets/images/location-1.jpg",
-        "created_date": "Sep 15, 2019",
-        "rate": 4.5,
-        "num_rate": 676,
-        "rate_text": "Good",
-        "status": "Open Now",
-        "favorite": false,
-        "address": "667 Wiegand Gardens Suite, United States",
-        "phone": "+903 9802-7892",
-        "location": {
-          "id": 1,
-          "name": "Lounge Coffee Bar",
-          "lat": 37.774929,
-          "long": -122.419418
-        }
-      },
-      {
-        "id": 2,
-        "type": "hotel",
-        "title": "Cozy Royal Room",
-        "subtitle": "Arts & Humanities",
-        "image": "assets/images/location-2.jpg",
-        "created_date": "Sep 15, 2019",
-        "rate": 4.0,
-        "num_rate": 676,
-        "rate_text": "Good",
-        "status": "Open Now",
-        "favorite": true,
-        "address": "667 Wiegand Gardens Suite, United States",
-        "phone": "+903 9802-7892",
-        "location": {
-          "id": 2,
-          "name": "Lounge Coffee Bar",
-          "lat": 37.775434,
-          "long": -122.426516
-        }
-      },
-      {
-        "id": 3,
-        "type": "hotel",
-        "title": "Adorable Room",
-        "subtitle": "Arts & Humanities",
-        "image": "assets/images/location-3.jpg",
-        "created_date": "Sep 15, 2019",
-        "rate": 4.5,
-        "num_rate": 676,
-        "rate_text": "Good",
-        "favorite": false,
-        "address": "667 Wiegand Gardens Suite, United States",
-        "phone": "+903 9802-7892",
-        "location": {
-          "id": 3,
-          "name": "Lounge Coffee Bar",
-          "lat": 37.774228,
-          "long": -122.433966
-        }
-      },
-      {
-        "id": 4,
-        "type": "hotel",
-        "title": "Vallejo Guest Room",
-        "subtitle": "Arts & Humanities",
-        "image": "assets/images/location-4.jpg",
-        "created_date": "Sep 15, 2019",
-        "rate": 4.5,
-        "num_rate": 676,
-        "rate_text": "Good",
-        "status": "Close",
-        "favorite": true,
-        "address": "667 Wiegand Gardens Suite, United States",
-        "phone": "+903 9802-7892",
-        "location": {
-          "id": 4,
-          "name": "Lounge Coffee Bar",
-          "lat": 37.772057,
-          "long": -122.429248
-        }
-      },
-      {
-        "id": 5,
-        "type": "hotel",
-        "title": "Lounge Coffee Bar",
-        "subtitle": "Arts & Humanities",
-        "image": "assets/images/location-5.jpg",
-        "created_date": "Sep 15, 2019",
-        "rate": 4.5,
-        "num_rate": 676,
-        "rate_text": "Good",
-        "favorite": false,
-        "address": "667 Wiegand Gardens Suite, United States",
-        "phone": "+903 9802-7892",
-        "location": {
-          "id": 5,
-          "name": "Lounge Coffee Bar",
-          "lat": 37.768664,
-          "long": -122.407027
-        }
-      },
-      {
-        "id": 6,
-        "type": "hotel",
-        "title": "Lounge Coffee Bar",
-        "subtitle": "Arts & Humanities",
-        "image": "assets/images/location-6.jpg",
-        "created_date": "Sep 15, 2019",
-        "rate": 4.0,
-        "num_rate": 676,
-        "rate_text": "Good",
-        "favorite": false,
-        "address": "667 Wiegand Gardens Suite, United States",
-        "phone": "+903 9802-7892",
-        "location": {
-          "id": 6,
-          "name": "Lounge Coffee Bar",
-          "lat": 37.756722,
-          "long": -122.430621
-        }
-      },
-      {
-        "id": 7,
-        "type": "hotel",
-        "title": "Lounge Coffee Bar",
-        "subtitle": "Arts & Humanities",
-        "image": "assets/images/location-7.jpg",
-        "created_date": "Sep 15, 2019",
-        "rate": 4.5,
-        "num_rate": 676,
-        "rate_text": "Good",
-        "favorite": true,
-        "address": "667 Wiegand Gardens Suite, United States",
-        "phone": "+903 9802-7892",
-        "location": {
-          "id": 7,
-          "name": "Lounge Coffee Bar",
-          "lat": 37.753857,
-          "long": -122.455688
-        }
-      },
-      {
-        "id": 8,
-        "type": "hotel",
-        "title": "Lounge Coffee Bar",
-        "subtitle": "Arts & Humanities",
-        "image": "assets/images/location-1.jpg",
-        "created_date": "Sep 15, 2019",
-        "rate": 4.5,
-        "num_rate": 676,
-        "rate_text": "Good",
-        "status": "Open Now",
-        "favorite": false,
-        "address": "667 Wiegand Gardens Suite, United States",
-        "phone": "+903 9802-7892",
-        "location": {
-          "id": 1,
-          "name": "Lounge Coffee Bar",
-          "lat": 37.774929,
-          "long": -122.419418
-        }
-      },
-      {
-        "id": 9,
-        "type": "hotel",
-        "title": "Cozy Royal Room",
-        "subtitle": "Arts & Humanities",
-        "image": "assets/images/location-2.jpg",
-        "created_date": "Sep 15, 2019",
-        "rate": 4.0,
-        "num_rate": 676,
-        "rate_text": "Good",
-        "status": "Open Now",
-        "favorite": true,
-        "address": "667 Wiegand Gardens Suite, United States",
-        "phone": "+903 9802-7892",
-        "location": {
-          "id": 2,
-          "name": "Lounge Coffee Bar",
-          "lat": 37.775434,
-          "long": -122.426516
-        }
-      },
-      {
-        "id": 10,
-        "type": "hotel",
-        "title": "Adorable Room",
-        "subtitle": "Arts & Humanities",
-        "image": "assets/images/location-3.jpg",
-        "created_date": "Sep 15, 2019",
-        "rate": 4.5,
-        "num_rate": 676,
-        "rate_text": "Good",
-        "favorite": false,
-        "address": "667 Wiegand Gardens Suite, United States",
-        "phone": "+903 9802-7892",
-        "location": {
-          "id": 3,
-          "name": "Lounge Coffee Bar",
-          "lat": 37.774228,
-          "long": -122.433966
-        }
-      },
-      {
-        "id": 11,
-        "type": "hotel",
-        "title": "Vallejo Guest Room",
-        "subtitle": "Arts & Humanities",
-        "image": "assets/images/location-4.jpg",
-        "created_date": "Sep 15, 2019",
-        "rate": 4.5,
-        "num_rate": 676,
-        "rate_text": "Good",
-        "status": "Close",
-        "favorite": true,
-        "address": "667 Wiegand Gardens Suite, United States",
-        "phone": "+903 9802-7892",
-        "location": {
-          "id": 4,
-          "name": "Lounge Coffee Bar",
-          "lat": 37.772057,
-          "long": -122.429248
-        }
+        "title": "Wellness events",
+        "image": "assets/images/event-7.jpg",
+        "address": "221 79th St, Bay Ridge, Brooklyn",
+        "start_time": "2019-01-20 10:27:00",
+        "type": "event"
       }
     ]
   },

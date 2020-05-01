@@ -6,106 +6,105 @@
         "id": 1,
         "category":{
           "id": 1,
-          "name": "Shopping",
-          "count": 52,
-          "image": "assets/images/category-1.jpg",
-          "icon": "shopping_basket",
+          "title": "hotel",
+          "icon": "hotel",
           "color": "#ff8a65",
-          "route": "list"
+          "type": "hotel"
         },
-        "title": "Stet clita kasd gubergren",
-        "subtitle": "At vero eos et accusam et justo duo dolores …",
-        "date": "Dec 11, 2018"
+        "title": "Open Hotel Alert",
+        "subtitle": "We alert you when sold out hotels have an open room.",
+        "date": "2019-02-14 10:27:00"
       },
       {
         "id": 2,
         "category":{
           "id": 2,
-          "name": "Coffee & Bar",
-          "count": 54,
-          "image": "assets/images/category-2.jpg",
-          "icon": "local_drink",
+          "title": "tour",
+          "icon": "location_on",
           "color": "#5d6d7e",
-          "route": "list"
+          "type": "tour"
         },
-        "title": "Stet clita kasd gubergren",
-        "subtitle": "At vero eos et accusam et justo duo dolores …",
-        "date": "Dec 11, 2018"
+        "title": "Discover concerts near you",
+        "subtitle": "See which of your favorite artists are playing nearby, and explore personalized concert recommendations.",
+        "date": "2019-02-16 08:27:00"
       },
       {
         "id": 3,
         "category":{
           "id": 3,
-          "name": "Events",
-          "count": 32,
-          "image": "assets/images/category-3.jpg",
-          "icon": "event_available",
+          "title": "car",
+          "icon": "directions_car",
           "color": "#a569bd",
-          "route": "list"
+          "type": "car"
         },
-        "title": "Stet clita kasd gubergren",
-        "subtitle": "At vero eos et accusam et justo duo dolores …",
-        "date": "Dec 11, 2018"
+        "title": "Battery charge warning",
+        "subtitle": "First thing you should do is turn off anything that draws power from the battery, except for the headlights if you are driving at night.",
+        "date": "2019-02-14 12:00:00"
       },
       {
         "id": 4,
         "category":{
           "id": 4,
-          "name": "Real Estate",
-          "count": 12,
-          "image": "assets/images/category-4.jpg",
-          "icon": "all_inclusive",
+          "title": "flight",
+          "icon": "flight",
           "color": "#5dade2",
-          "route": "list"
+          "type": "flight"
         },
-        "title": "Stet clita kasd gubergren",
-        "subtitle": "At vero eos et accusam et justo duo dolores …",
-        "date": "Dec 11, 2018"
+        "title": "Flight Price Tracker",
+        "subtitle": "When the price changes, you’ll be notified via email or push notification if the price went up or down (and by how much).",
+        "date": "2019-02-23 10:00:00"
       },
       {
         "id": 5,
         "category":{
           "id": 5,
-          "name": "Job Street",
-          "count": 54,
-          "image": "assets/images/location-1.jpg",
-          "icon": "card_travel",
+          "title": "cruise",
+          "icon": "directions_boat",
           "color": "#4a90a4",
-          "route": "list"
+          "type": "cruise"
         },
-        "title": "Stet clita kasd gubergren",
-        "subtitle": "At vero eos et accusam et justo duo dolores …",
-        "date": "Dec 11, 2018"
+        "title": "Cruise Price Alerts",
+        "subtitle": "Price Alerts is a cruise price tracker shopping tool from Cruise Critic that allows users to sign up to receive email price drop notifications when prices change on specific cruise sailings, itineraries, destinations, cruise lines and more.",
+        "date": "2020-02-14 10:00:00"
       },
       {
         "id": 6,
         "category":{
           "id": 6,
-          "name": "Restaurant",
-          "count": 63,
-          "image": "assets/images/location-2.jpg",
-          "icon": "restaurant",
+          "title": "bus",
+          "icon": "directions_bus",
           "color": "#58d68d",
-          "route": "list"
+          "type": "bus"
         },
-        "title": "Stet clita kasd gubergren",
-        "subtitle": "At vero eos et accusam et justo duo dolores …",
-        "date": "Dec 11, 2018"
+        "title": "Corporate Shuttles",
+        "subtitle": "Running a shuttle fleet for corporate HQ, a hospital, rental car company, hotel, or airport with employees or customers waiting for a shuttle bus?",
+        "date": "2020-02-10 12:00:00"
       },
       {
         "id": 7,
         "category":{
           "id": 7,
-          "name": "Automotive",
-          "count": 22,
-          "image": "assets/images/location-3.jpg",
-          "icon": "directions_car",
+          "title": "event",
+          "icon": "event",
           "color": "#fdc60a",
-          "route": "list"
+          "type": "event"
         },
-        "title": "Stet clita kasd gubergren",
-        "subtitle": "At vero eos et accusam et justo duo dolores …",
-        "date": "Dec 11, 2018"
+        "title": "Travel time within the event",
+        "subtitle": "Create a new event, and enter a title and the start time. Travel time doesn’t work with all-day events.",
+        "date": "2020-02-20 12:00:00"
+      },
+      {
+        "id": 8,
+        "category":{
+          "id": 8,
+          "title": "news",
+          "icon": "description",
+          "color": "#ff8a65",
+          "type": "news"
+        },
+        "title": "Frederick Together Town Hall happening today",
+        "subtitle": "The Frederick News-Post is moderating the Frederick Together town Hall Thursday evening from 6 to 7:30 p.m.",
+        "date": "2020-02-25 08:00:00"
       }
     ]
   },

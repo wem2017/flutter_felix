@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:felix_flutter/models/model.dart';
 import 'package:felix_flutter/screens/chat/receive_message.dart';
 import 'package:felix_flutter/screens/chat/send_message.dart';
+import 'package:flutter/material.dart';
 
 class ChatItem extends StatelessWidget {
   final MessageModel item;
@@ -10,7 +10,7 @@ class ChatItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (item.status == Status.sent) {
+    if (item.from == null) {
       return SendMessage(item: item);
     }
 

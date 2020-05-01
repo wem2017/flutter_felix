@@ -1,0 +1,80 @@
+{
+  "success": true,
+  "data": {
+    "booking_history": [
+      {
+        "id": 1,
+        "title": "Orient Express",
+        "check_in": "2019-02-27 13:27:00",
+        "check_out": "2019-02-29 12:00:00",
+        "day": 5,
+        "night": 4,
+        "price": "1399.9$"
+      },
+      {
+        "id": 2,
+        "title": "Mantis",
+        "check_in": "2019-02-21 14:00:00",
+        "check_out": "2019-02-29 15:00:00",
+        "day": 8,
+        "night": 7,
+        "price": "2399.9$"
+      },
+      {
+        "id": 3,
+        "title": "Mantra",
+        "check_in": "2019-02-12 08:14:00",
+        "check_out": "2019-02-24 12:00:00",
+        "day": 12,
+        "night": 11,
+        "price": "3399.9$"
+      },
+      {
+        "id": 4,
+        "title": "Breakfree",
+        "check_in": "2019-02-01 01:27:00",
+        "check_out": "2019-02-13 12:00:00",
+        "day": 12,
+        "night": 11,
+        "price": "3399.9$"
+      },
+      {
+        "id": 5,
+        "title": "CHome Inns",
+        "check_in": "2019-02-13 08:27:00",
+        "check_out": "2019-02-15 14:00:00",
+        "day": 2,
+        "night": 1,
+        "price": "399.9$"
+      },
+      {
+        "id": 6,
+        "title": "Vietnam",
+        "check_in": "2019-02-15 09:27:00",
+        "check_out": "2019-02-20 01:00:00",
+        "day": 5,
+        "night": 4,
+        "price": "1399.9$"
+      },
+      {
+        "id": 7,
+        "title": "Morocco",
+        "check_in": "2019-02-27 12:27:00",
+        "check_out": "2019-02-29 15:00:00",
+        "day": 2,
+        "night": 1,
+        "price": "399.9$"
+      },
+      {
+        "id": 8,
+        "title": "India",
+        "check_in": "2019-02-27 05:27:00",
+        "check_out": "2019-02-29 12:00:00",
+        "day": 2,
+        "night": 1,
+        "price": "399.9$"
+      }
+    ]
+  },
+  "message": "get data success"
+}

@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:felix_flutter/app_locale_delegate.dart';
 import 'package:felix_flutter/utils/utils.dart';
+import 'package:flutter/material.dart';
 
 class Translate {
   final Locale locale;
@@ -28,6 +28,6 @@ class Translate {
   }
 
   String translate(String key) {
-    return _localizedStrings[key] ?? 'Unknown';
+    return _localizedStrings[key] ?? key;
   }
 }

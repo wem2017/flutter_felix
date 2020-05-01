@@ -1,11 +1,11 @@
-import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:felix_flutter/blocs/bloc.dart';
 import 'package:felix_flutter/configs/application.dart';
 import 'package:felix_flutter/screens/screen.dart';
 import 'package:felix_flutter/utils/logger.dart';
 import 'package:felix_flutter/utils/utils.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class MainNavigation extends StatefulWidget {
   MainNavigation({Key key}) : super(key: key);
@@ -98,14 +98,14 @@ class _MainNavigationState extends State<MainNavigation> {
         icon: Icon(Icons.bookmark),
         title: Padding(
           padding: EdgeInsets.only(top: 3),
-          child: Text(Translate.of(context).translate('wish_list')),
+          child: Text(Translate.of(context).translate('booking')),
         ),
       ),
       BottomNavigationBarItem(
         icon: Icon(Icons.message),
         title: Padding(
           padding: EdgeInsets.only(top: 3),
-          child: Text(Translate.of(context).translate('message')),
+          child: Text(Translate.of(context).translate('messages')),
         ),
       ),
       BottomNavigationBarItem(
@@ -134,7 +134,7 @@ class _MainNavigationState extends State<MainNavigation> {
             index: _selectedIndex,
             children: <Widget>[
               Home(),
-              WishList(),
+              BookingHistory(),
               MessageList(),
               NotificationList(),
               auth is AuthenticationSuccess ? Profile() : SignIn()

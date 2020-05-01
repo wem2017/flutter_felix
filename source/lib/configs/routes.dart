@@ -1,6 +1,6 @@
+import 'package:felix_flutter/screens/screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:felix_flutter/screens/screen.dart';
 
 class Routes {
   static const String signIn = "/signIn";
@@ -9,7 +9,6 @@ class Routes {
   static const String productDetail = "/productDetail";
   static const String productDetailTab = "ProductDetailTab";
   static const String searchHistory = "/searchHistory";
-  static const String category = "/category";
   static const String editProfile = "/editProfile";
   static const String changePassword = "/changePassword";
   static const String changeLanguage = "/changeLanguage";
@@ -51,38 +50,11 @@ class Routes {
           },
         );
 
-      case productDetail:
-        return MaterialPageRoute(
-          builder: (context) {
-            return ProductDetail();
-          },
-        );
-
-      case productDetailTab:
-        return MaterialPageRoute(
-          builder: (context) {
-            return ProductDetailTab();
-          },
-        );
-
-      case searchHistory:
-        return MaterialPageRoute(
-          builder: (context) => SearchHistory(),
-          fullscreenDialog: true,
-        );
-
-      case category:
-        return MaterialPageRoute(
-          builder: (context) {
-            return Category();
-          },
-        );
-
       case chat:
-        final user = settings.arguments;
+        final id = settings.arguments;
         return MaterialPageRoute(
           builder: (context) => Chat(
-            user: user,
+            id: id,
           ),
         );
 
@@ -169,14 +141,6 @@ class Routes {
           builder: (context) => Location(
             location: location,
           ),
-        );
-
-      case listProduct:
-        final category = settings.arguments;
-        return MaterialPageRoute(
-          builder: (context) {
-            return ListProduct(title: category);
-          },
         );
 
       case gallery:

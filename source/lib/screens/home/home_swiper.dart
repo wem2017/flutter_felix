@@ -1,15 +1,13 @@
+import 'package:felix_flutter/models/model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:felix_flutter/models/model.dart';
 import 'package:shimmer/shimmer.dart';
 
 class HomeSwipe extends StatelessWidget {
   HomeSwipe({
     Key key,
     @required this.images,
-    this.height,
   }) : super(key: key);
-  final double height;
   final List<ImageModel> images;
 
   @override
@@ -27,7 +25,7 @@ class HomeSwipe extends StatelessWidget {
         autoplay: true,
         itemCount: images.length,
         pagination: SwiperPagination(
-          alignment: Alignment(0.0, 0.4),
+          alignment: Alignment(0.0, 0.6),
           builder: SwiperPagination.dots,
         ),
       );

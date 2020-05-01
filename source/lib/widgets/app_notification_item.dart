@@ -1,5 +1,7 @@
-import 'package:flutter/material.dart';
+import 'package:felix_flutter/configs/config.dart';
 import 'package:felix_flutter/models/model.dart';
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:shimmer/shimmer.dart';
 
 class AppNotificationItem extends StatelessWidget {
@@ -115,10 +117,16 @@ class AppNotificationItem extends StatelessWidget {
                             item.title,
                             maxLines: 1,
                             style: Theme.of(context).textTheme.subtitle,
+                            overflow: TextOverflow.ellipsis,
                           ),
                         ),
-                        Text(item.date,
-                            style: Theme.of(context).textTheme.caption)
+                        Text(
+                          DateFormat(
+                            Application.formatTime,
+                            AppLanguage.defaultLanguage.languageCode,
+                          ).format(item.date),
+                          style: Theme.of(context).textTheme.caption,
+                        )
                       ],
                     ),
                     Padding(
@@ -131,6 +139,7 @@ class AppNotificationItem extends StatelessWidget {
                           .textTheme
                           .caption
                           .copyWith(fontWeight: FontWeight.w500),
+                      overflow: TextOverflow.ellipsis,
                     )
                   ],
                 ),

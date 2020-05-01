@@ -1,42 +1,50 @@
-import 'package:flutter/cupertino.dart';
-import 'package:felix_flutter/models/model.dart';
 import 'package:felix_flutter/utils/utils.dart';
+import 'package:flutter/cupertino.dart';
+
+enum CategoryType {
+  hotel,
+  tour,
+  car,
+  flight,
+  cruise,
+  bus,
+  event,
+  news,
+}
 
 class CategoryModel {
   final int id;
   final String title;
-  final int count;
-  final String image;
   final IconData icon;
   final Color color;
-  final ProductType type;
+  final CategoryType type;
 
   CategoryModel({
     this.id,
     this.title,
-    this.count,
-    this.image,
     this.icon,
     this.color,
     this.type,
   });
 
-  static ProductType _setType(String type) {
+  static CategoryType _setType(String type) {
     switch (type) {
-      case 'shop':
-        return ProductType.shop;
-      case 'drink':
-        return ProductType.drink;
+      case 'hotel':
+        return CategoryType.hotel;
+      case 'tour':
+        return CategoryType.tour;
+      case 'car':
+        return CategoryType.car;
+      case 'flight':
+        return CategoryType.flight;
+      case 'cruise':
+        return CategoryType.cruise;
+      case 'bus':
+        return CategoryType.bus;
       case 'event':
-        return ProductType.event;
-      case 'estate':
-        return ProductType.estate;
-      case 'job':
-        return ProductType.job;
-      case 'restaurant':
-        return ProductType.restaurant;
-      case 'automotive':
-        return ProductType.automotive;
+        return CategoryType.event;
+      case 'news':
+        return CategoryType.news;
       default:
         return null;
     }
@@ -45,14 +53,9 @@ class CategoryModel {
   factory CategoryModel.fromJson(Map<String, dynamic> json) {
     final icon = UtilIcon.getIconData(json['icon'] ?? "Unknown");
     final color = UtilColor.getColorFromHex(json['color'] ?? "#ff8a65");
-    if (json['image'] is Map) {
-      json['image'] = "Unknown";
-    }
     return CategoryModel(
-      id: json['term_id'] as int ?? 0,
-      title: json['name'] as String ?? 'Unknown',
-      count: json['count'] as int ?? 0,
-      image: json['image'] as String ?? 'Unknown',
+      id: json['id'] as int ?? 0,
+      title: json['title'] as String ?? 'Unknown',
       icon: icon,
       color: color,
       type: _setType(json['type'] as String ?? "Unknown"),

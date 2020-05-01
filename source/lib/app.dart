@@ -1,11 +1,11 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:felix_flutter/blocs/bloc.dart';
 import 'package:felix_flutter/configs/config.dart';
 import 'package:felix_flutter/main_navigation.dart';
 import 'package:felix_flutter/screens/screen.dart';
 import 'package:felix_flutter/utils/utils.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 class App extends StatefulWidget {
   @override
@@ -20,7 +20,6 @@ class _AppState extends State<App> {
   ThemeBloc _themeBloc;
   AuthBloc _authBloc;
   LoginBloc _loginBloc;
-  SearchBloc _searchBloc;
 
   @override
   void initState() {
@@ -34,7 +33,6 @@ class _AppState extends State<App> {
       themeBloc: _themeBloc,
       languageBloc: _languageBloc,
     );
-    _searchBloc = SearchBloc();
     super.initState();
   }
 
@@ -45,7 +43,6 @@ class _AppState extends State<App> {
     _themeBloc.close();
     _authBloc.close();
     _loginBloc.close();
-    _searchBloc.close();
     super.dispose();
   }
 
@@ -67,9 +64,6 @@ class _AppState extends State<App> {
         ),
         BlocProvider<LoginBloc>(
           create: (context) => _loginBloc,
-        ),
-        BlocProvider<SearchBloc>(
-          create: (context) => _searchBloc,
         ),
       ],
       child: BlocBuilder<LanguageBloc, LanguageState>(
