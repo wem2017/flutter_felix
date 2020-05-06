@@ -11,6 +11,7 @@ export 'font_setting/font_setting.dart';
 export 'forgot_password/forgot_password.dart';
 export 'gallery/gallery.dart';
 export 'home/home.dart';
+export 'hotel/hotel.dart';
 export 'intro_preview/intro_preview.dart';
 export 'language_setting/language_setting.dart';
 export 'loading/loading.dart';

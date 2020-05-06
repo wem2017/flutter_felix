@@ -1,6 +1,8 @@
 import 'package:felix_flutter/api/api.dart';
+import 'package:felix_flutter/configs/config.dart';
 import 'package:felix_flutter/models/model.dart';
 import 'package:felix_flutter/models/screen_models/screen_models.dart';
+import 'package:felix_flutter/screens/home/home_category_list.dart';
 import 'package:felix_flutter/screens/home/home_sliver_app_bar.dart';
 import 'package:felix_flutter/utils/utils.dart';
 import 'package:felix_flutter/widgets/widget.dart';
@@ -24,8 +26,16 @@ class _HomeState extends State<Home> {
     super.initState();
   }
 
-  ///On select category
-  void _onPressCategory(CategoryModel item) {}
+  ///On select category and More
+  void _onPressCategory(CategoryModel item) {
+    switch (item.type) {
+      case CategoryType.hotel:
+        Navigator.pushNamed(context, Routes.hotel);
+        break;
+      default:
+        _onChangeSort();
+    }
+  }
 
   ///Fetch API
   Future<void> _loadData() async {
@@ -35,6 +45,19 @@ class _HomeState extends State<Home> {
         _homePage = HomePageModel.fromJson(result.data);
       });
     }
+  }
+
+  ///On Open More
+  void _onChangeSort() {
+    showModalBottomSheet<void>(
+      backgroundColor: Colors.transparent,
+      context: context,
+      builder: (BuildContext context) {
+        return HomeCategoryList(
+          category: _homePage?.category,
+        );
+      },
+    );
   }
 
   ///On navigate product detail

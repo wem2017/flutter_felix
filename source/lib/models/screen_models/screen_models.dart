@@ -4,6 +4,7 @@ export 'category_page_model.dart';
 export 'chat_page_model.dart';
 export 'filter_page_model.dart';
 export 'home_page_model.dart';
+export 'hotel_page_model.dart';
 export 'message_detail_page_model.dart';
 export 'message_page_model.dart';
 export 'notification_page_model.dart';

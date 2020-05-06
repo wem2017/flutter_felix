@@ -103,6 +103,15 @@ class AppBarHomeSliver extends SliverPersistentHeaderDelegate {
 
   ///Build category UI
   Widget _buildCategory() {
+    List<CategoryModel> listBuild = category;
+    final more = CategoryModel.fromJson({
+      "id": 9,
+      "title": "more",
+      "icon": "more_horiz",
+      "color": "#ff8a65",
+      "type": "more"
+    });
+
     if (category == null) {
       return Wrap(
         runSpacing: 8,
@@ -115,10 +124,15 @@ class AppBarHomeSliver extends SliverPersistentHeaderDelegate {
       );
     }
 
+    if (category.length > 7) {
+      listBuild = category.take(7).toList();
+      listBuild.add(more);
+    }
+
     return Wrap(
       runSpacing: 8,
       alignment: WrapAlignment.center,
-      children: category.map(
+      children: listBuild.map(
         (item) {
           return HomeCategoryItem(
             item: item,

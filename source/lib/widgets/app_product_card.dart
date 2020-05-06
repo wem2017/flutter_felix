@@ -13,7 +13,7 @@ class AppProductCard extends StatelessWidget {
     this.type = ProductCardType.action,
   }) : super(key: key);
 
-  final item;
+  final dynamic item;
   final Function(dynamic) onPressed;
   final ProductCardType type;
 

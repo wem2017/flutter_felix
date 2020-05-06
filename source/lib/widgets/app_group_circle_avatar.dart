@@ -240,8 +240,8 @@ class AppGroupCircleAvatar extends StatelessWidget {
                       Flexible(
                         flex: 1,
                         child: Container(
-                          alignment: Alignment.topLeft,
-                          padding: EdgeInsets.only(left: 2, right: 2),
+                          alignment: Alignment.center,
+                          padding: EdgeInsets.only(bottom: 2, right: 2),
                           child: Text(
                             '+${member.length - 3}',
                             style: Theme.of(context)

@@ -1,16 +1,7 @@
 import 'package:felix_flutter/utils/utils.dart';
 import 'package:flutter/cupertino.dart';
 
-enum CategoryType {
-  hotel,
-  tour,
-  car,
-  flight,
-  cruise,
-  bus,
-  event,
-  news,
-}
+enum CategoryType { hotel, tour, car, flight, cruise, bus, event, news, more }
 
 class CategoryModel {
   final int id;
@@ -46,7 +37,7 @@ class CategoryModel {
       case 'news':
         return CategoryType.news;
       default:
-        return null;
+        return CategoryType.more;
     }
   }
 

@@ -1,14 +1,14 @@
-import 'package:flutter/material.dart';
 import 'package:felix_flutter/models/model.dart';
 import 'package:felix_flutter/utils/utils.dart';
 import 'package:felix_flutter/widgets/widget.dart';
+import 'package:flutter/material.dart';
 
-class AppModelBottomSheet extends StatefulWidget {
+class AppModalBottomSheet extends StatefulWidget {
   final SortModel selected;
   final List<SortModel> option;
   final ValueChanged onChange;
 
-  AppModelBottomSheet({
+  AppModalBottomSheet({
     Key key,
     this.selected,
     this.option,
@@ -16,12 +16,12 @@ class AppModelBottomSheet extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _AppModelBottomSheetState createState() {
-    return _AppModelBottomSheetState();
+  _AppModalBottomSheetState createState() {
+    return _AppModalBottomSheetState();
   }
 }
 
-class _AppModelBottomSheetState extends State<AppModelBottomSheet> {
+class _AppModalBottomSheetState extends State<AppModalBottomSheet> {
   SortModel _currentSort;
 
   @override

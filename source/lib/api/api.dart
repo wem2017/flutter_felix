@@ -49,13 +49,6 @@ class Api {
     return ResultApiModel.fromJson(result);
   }
 
-  ///Get Category
-  static Future<dynamic> getCategory() async {
-    await Future.delayed(Duration(seconds: 1));
-    final result = await UtilAsset.loadJson("assets/data/category.json");
-    return ResultApiModel.fromJson(result);
-  }
-
   ///Get Home
   static Future<dynamic> getHome() async {
     await Future.delayed(Duration(seconds: 1));
@@ -92,30 +85,10 @@ class Api {
     return ResultApiModel.fromJson(result);
   }
 
-  ///Get ProductDetail and Product Detail Tab
-  static Future<dynamic> getProductDetail({tabExtend: false}) async {
-    await Future.delayed(Duration(seconds: 1));
-    var result;
-    if (tabExtend) {
-      result = await UtilAsset.loadJson("assets/data/product_detail_tab.json");
-    } else {
-      result = await UtilAsset.loadJson("assets/data/product_detail.json");
-    }
-
-    return ResultApiModel.fromJson(result);
-  }
-
   ///Get History Search
   static Future<dynamic> getHistorySearch() async {
     await Future.delayed(Duration(seconds: 1));
     final result = await UtilAsset.loadJson("assets/data/search_history.json");
-    return ResultApiModel.fromJson(result);
-  }
-
-  ///Get Wish List
-  static Future<dynamic> getWishList() async {
-    await Future.delayed(Duration(seconds: 1));
-    final result = await UtilAsset.loadJson("assets/data/wishlist.json");
     return ResultApiModel.fromJson(result);
   }
 
@@ -133,17 +106,17 @@ class Api {
     return ResultApiModel.fromJson(result);
   }
 
-  ///Get Product List
-  static Future<dynamic> getProduct() async {
-    await Future.delayed(Duration(seconds: 1));
-    final result = await UtilAsset.loadJson("assets/data/product_list.json");
-    return ResultApiModel.fromJson(result);
-  }
-
   ///Get Review
   static Future<dynamic> getReview() async {
     await Future.delayed(Duration(seconds: 1));
     final result = await UtilAsset.loadJson("assets/data/review.json");
+    return ResultApiModel.fromJson(result);
+  }
+
+  ///Get list hotel
+  static Future<dynamic> getHotelList() async {
+    await Future.delayed(Duration(seconds: 1));
+    final result = await UtilAsset.loadJson("assets/data/hotel.json");
     return ResultApiModel.fromJson(result);
   }
 

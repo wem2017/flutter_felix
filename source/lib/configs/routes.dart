@@ -26,6 +26,7 @@ class Routes {
   static const String setting = "/setting";
   static const String fontSetting = "/fontSetting";
   static const String chooseLocation = "/chooseLocation";
+  static const String hotel = "/hotel";
 
   Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -165,6 +166,13 @@ class Routes {
         return MaterialPageRoute(
           builder: (context) {
             return ChooseLocation(location: location);
+          },
+        );
+
+      case hotel:
+        return MaterialPageRoute(
+          builder: (context) {
+            return Hotel();
           },
         );
 

@@ -1,6 +1,6 @@
 name: felix_flutter
 description: wem2017.github.io
-version: 1.0.4+8
+version: 1.0.0+1
 environment:
   sdk: ">=2.1.0 <3.0.0"
 dependencies:
