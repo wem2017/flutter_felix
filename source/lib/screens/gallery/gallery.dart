@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:felix_flutter/configs/config.dart';
 import 'package:felix_flutter/models/model.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_swiper/flutter_swiper.dart';
 
 class Gallery extends StatefulWidget {
   final List<ImageModel> photo;
@@ -86,14 +86,14 @@ class _GalleryState extends State<Gallery> {
                     "Standard Double Room",
                     style: Theme.of(context)
                         .textTheme
-                        .subtitle
+                        .subtitle2
                         .copyWith(color: Colors.white),
                   ),
                   Text(
                     "${_index + 1}/${widget.photo.length}",
                     style: Theme.of(context)
                         .textTheme
-                        .subtitle
+                        .subtitle2
                         .copyWith(color: Colors.white),
                   )
                 ],

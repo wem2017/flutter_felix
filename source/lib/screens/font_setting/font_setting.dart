@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:felix_flutter/blocs/bloc.dart';
 import 'package:felix_flutter/configs/config.dart';
 import 'package:felix_flutter/utils/utils.dart';
 import 'package:felix_flutter/widgets/widget.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class FontSetting extends StatefulWidget {
   FontSetting({Key key}) : super(key: key);
@@ -62,7 +62,7 @@ class _FontSettingState extends State<FontSetting> {
                     },
                     textStyle: Theme.of(context)
                         .textTheme
-                        .subhead
+                        .subtitle1
                         .copyWith(fontFamily: item),
                   );
                 },

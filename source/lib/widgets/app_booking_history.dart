@@ -52,7 +52,7 @@ class AppBookingHistory extends StatelessWidget {
                 Expanded(
                   child: Text(
                     item.title,
-                    style: Theme.of(context).textTheme.subtitle.copyWith(
+                    style: Theme.of(context).textTheme.subtitle2.copyWith(
                         color: Colors.white, fontWeight: FontWeight.w600),
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -89,7 +89,7 @@ class AppBookingHistory extends StatelessWidget {
                         'EEE MMM d yyyy',
                         AppLanguage.defaultLanguage.languageCode,
                       ).format(item.checkIn),
-                      style: Theme.of(context).textTheme.body1.copyWith(
+                      style: Theme.of(context).textTheme.bodyText2.copyWith(
                           color: Colors.white, fontWeight: FontWeight.w600),
                     ),
                   ],
@@ -109,7 +109,7 @@ class AppBookingHistory extends StatelessWidget {
                         'EEE MMM d yyyy',
                         AppLanguage.defaultLanguage.languageCode,
                       ).format(item.checkOut),
-                      style: Theme.of(context).textTheme.body1.copyWith(
+                      style: Theme.of(context).textTheme.bodyText2.copyWith(
                           color: Colors.white, fontWeight: FontWeight.w600),
                     ),
                   ],

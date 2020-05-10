@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:felix_flutter/utils/utils.dart';
 import 'package:felix_flutter/widgets/widget.dart';
+import 'package:flutter/material.dart';
 
 class SignUp extends StatefulWidget {
   SignUp({Key key}) : super(key: key);
@@ -65,7 +65,7 @@ class _SignUpState extends State<SignUp> {
                     Translate.of(context).translate('account'),
                     style: Theme.of(context)
                         .textTheme
-                        .subtitle
+                        .subtitle2
                         .copyWith(fontWeight: FontWeight.w600),
                   ),
                 ),
@@ -99,7 +99,7 @@ class _SignUpState extends State<SignUp> {
                     Translate.of(context).translate('password'),
                     style: Theme.of(context)
                         .textTheme
-                        .subtitle
+                        .subtitle2
                         .copyWith(fontWeight: FontWeight.w600),
                   ),
                 ),
@@ -140,7 +140,7 @@ class _SignUpState extends State<SignUp> {
                     Translate.of(context).translate('email'),
                     style: Theme.of(context)
                         .textTheme
-                        .subtitle
+                        .subtitle2
                         .copyWith(fontWeight: FontWeight.w600),
                   ),
                 ),

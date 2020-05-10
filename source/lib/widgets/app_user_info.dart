@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:felix_flutter/models/model.dart';
+import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
 enum AppUserType { basic, information }
@@ -165,7 +165,7 @@ class AppUserInfo extends StatelessWidget {
                     children: <Widget>[
                       Text(user.name,
                           maxLines: 1,
-                          style: Theme.of(context).textTheme.subtitle),
+                          style: Theme.of(context).textTheme.subtitle2),
                       Padding(
                         padding: EdgeInsets.only(top: 3, bottom: 3),
                         child: Text(
@@ -212,7 +212,7 @@ class AppUserInfo extends StatelessWidget {
                       user.name,
                       style: Theme.of(context)
                           .textTheme
-                          .subhead
+                          .subtitle1
                           .copyWith(fontWeight: FontWeight.w600),
                     ),
                     Text(

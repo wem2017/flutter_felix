@@ -35,7 +35,7 @@ class AppNavBar extends StatelessWidget {
                 ),
                 Text(
                   Translate.of(context).translate(currentSort.name),
-                  style: Theme.of(context).textTheme.subtitle,
+                  style: Theme.of(context).textTheme.subtitle2,
                 )
               ],
             ),
@@ -63,7 +63,7 @@ class AppNavBar extends StatelessWidget {
                   padding: EdgeInsets.only(right: 20, left: 20),
                   child: Text(
                     Translate.of(context).translate('filter'),
-                    style: Theme.of(context).textTheme.subtitle,
+                    style: Theme.of(context).textTheme.subtitle2,
                   ),
                 )
               ],

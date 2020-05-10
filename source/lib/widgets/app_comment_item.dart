@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:felix_flutter/configs/config.dart';
 import 'package:felix_flutter/models/model.dart';
 import 'package:felix_flutter/widgets/app_star_rating.dart';
+import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
 class AppCommentItem extends StatelessWidget {
@@ -166,7 +166,7 @@ class AppCommentItem extends StatelessWidget {
                               maxLines: 1,
                               style: Theme.of(context)
                                   .textTheme
-                                  .subtitle
+                                  .subtitle2
                                   .copyWith(fontWeight: FontWeight.w600),
                             ),
                           ),
@@ -198,14 +198,14 @@ class AppCommentItem extends StatelessWidget {
               maxLines: 1,
               style: Theme.of(context)
                   .textTheme
-                  .subtitle
+                  .subtitle2
                   .copyWith(fontWeight: FontWeight.w600),
             ),
           ),
           Text(
             item.comment,
             maxLines: 5,
-            style: Theme.of(context).textTheme.body2,
+            style: Theme.of(context).textTheme.bodyText1,
           )
         ],
       ),

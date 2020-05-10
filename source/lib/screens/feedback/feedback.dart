@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
 import 'package:felix_flutter/configs/config.dart';
 import 'package:felix_flutter/models/model.dart';
 import 'package:felix_flutter/utils/utils.dart';
 import 'package:felix_flutter/widgets/widget.dart';
+import 'package:flutter/material.dart';
 
 class WriteReview extends StatefulWidget {
   final UserModel author;
@@ -127,7 +127,7 @@ class _WriteReviewState extends State<WriteReview> {
                         Translate.of(context).translate('title'),
                         style: Theme.of(context)
                             .textTheme
-                            .subtitle
+                            .subtitle2
                             .copyWith(fontWeight: FontWeight.w600),
                       ),
                     ),
@@ -164,7 +164,7 @@ class _WriteReviewState extends State<WriteReview> {
                         Translate.of(context).translate('description'),
                         style: Theme.of(context)
                             .textTheme
-                            .subtitle
+                            .subtitle2
                             .copyWith(fontWeight: FontWeight.w600),
                       ),
                     ),

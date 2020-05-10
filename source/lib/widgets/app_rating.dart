@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:felix_flutter/models/model.dart';
 import 'package:felix_flutter/utils/utils.dart';
+import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
 class AppRating extends StatelessWidget {
@@ -25,14 +25,14 @@ class AppRating extends StatelessWidget {
                     "0.0",
                     style: Theme.of(context)
                         .textTheme
-                        .display3
+                        .headline2
                         .copyWith(color: Theme.of(context).primaryColor),
                   ),
                   Text(
                     "${Translate.of(context).translate('out_of')} 0",
                     style: Theme.of(context)
                         .textTheme
-                        .subhead
+                        .subtitle1
                         .copyWith(fontWeight: FontWeight.w600),
                   ),
                 ],
@@ -196,7 +196,7 @@ class AppRating extends StatelessWidget {
                     children: <Widget>[
                       Text(
                         "Loading",
-                        style: Theme.of(context).textTheme.subtitle,
+                        style: Theme.of(context).textTheme.subtitle2,
                       ),
                     ],
                   )
@@ -220,14 +220,14 @@ class AppRating extends StatelessWidget {
                 "${rate.avg}",
                 style: Theme.of(context)
                     .textTheme
-                    .display3
+                    .headline2
                     .copyWith(color: Theme.of(context).primaryColor),
               ),
               Text(
                 "${Translate.of(context).translate('out_of')} ${rate.range}",
                 style: Theme.of(context)
                     .textTheme
-                    .subhead
+                    .subtitle1
                     .copyWith(fontWeight: FontWeight.w600),
               ),
             ],
@@ -453,7 +453,7 @@ class AppRating extends StatelessWidget {
                     "${rate.total} ${Translate.of(context).translate('rating')}",
                     style: Theme.of(context)
                         .textTheme
-                        .subtitle
+                        .subtitle2
                         .copyWith(fontWeight: FontWeight.w600),
                   ),
                 ],

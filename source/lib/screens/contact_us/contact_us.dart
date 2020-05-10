@@ -1,9 +1,9 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:felix_flutter/utils/utils.dart';
 import 'package:felix_flutter/widgets/widget.dart';
+import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class ContactUs extends StatefulWidget {
   @override
@@ -100,7 +100,7 @@ class ContactUsState extends State<ContactUs> {
                           Translate.of(context).translate('name'),
                           style: Theme.of(context)
                               .textTheme
-                              .subtitle
+                              .subtitle2
                               .copyWith(fontWeight: FontWeight.w600),
                         ),
                       ),
@@ -135,7 +135,7 @@ class ContactUsState extends State<ContactUs> {
                           Translate.of(context).translate('email'),
                           style: Theme.of(context)
                               .textTheme
-                              .subtitle
+                              .subtitle2
                               .copyWith(fontWeight: FontWeight.w600),
                         ),
                       ),
@@ -174,7 +174,7 @@ class ContactUsState extends State<ContactUs> {
                           Translate.of(context).translate('information'),
                           style: Theme.of(context)
                               .textTheme
-                              .subtitle
+                              .subtitle2
                               .copyWith(fontWeight: FontWeight.w600),
                         ),
                       ),

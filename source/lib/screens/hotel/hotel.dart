@@ -53,7 +53,7 @@ class _HotelState extends State<Hotel> {
 
   ///On search
   void _onSearch() {
-    Navigator.pushNamed(context, Routes.searchHistory);
+    Navigator.pushNamed(context, Routes.hotelSearch);
   }
 
   ///On change filter

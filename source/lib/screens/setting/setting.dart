@@ -1,10 +1,10 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:felix_flutter/blocs/bloc.dart';
 import 'package:felix_flutter/configs/config.dart';
 import 'package:felix_flutter/utils/language.dart';
 import 'package:felix_flutter/utils/utils.dart';
 import 'package:felix_flutter/widgets/widget.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class Setting extends StatefulWidget {
   Setting({Key key}) : super(key: key);
@@ -145,7 +145,7 @@ class _SettingState extends State<Setting> {
                     UtilLanguage.getGlobalLanguageName(
                       AppLanguage.defaultLanguage.languageCode,
                     ),
-                    style: Theme.of(context).textTheme.body2,
+                    style: Theme.of(context).textTheme.bodyText1,
                   ),
                   RotatedBox(
                     quarterTurns: UtilLanguage.isRTL() ? 2 : 0,
@@ -189,7 +189,7 @@ class _SettingState extends State<Setting> {
                     Translate.of(context).translate(
                       UtilTheme.exportLangTheme(AppTheme.darkThemeOption),
                     ),
-                    style: Theme.of(context).textTheme.body2,
+                    style: Theme.of(context).textTheme.bodyText1,
                   ),
                   RotatedBox(
                     quarterTurns: UtilLanguage.isRTL() ? 2 : 0,
@@ -210,7 +210,7 @@ class _SettingState extends State<Setting> {
                 children: <Widget>[
                   Text(
                     AppTheme.currentFont,
-                    style: Theme.of(context).textTheme.body2,
+                    style: Theme.of(context).textTheme.bodyText1,
                   ),
                   RotatedBox(
                     quarterTurns: UtilLanguage.isRTL() ? 2 : 0,
@@ -229,7 +229,7 @@ class _SettingState extends State<Setting> {
                 children: <Widget>[
                   Text(
                     Application.version,
-                    style: Theme.of(context).textTheme.body2,
+                    style: Theme.of(context).textTheme.bodyText1,
                   ),
                   RotatedBox(
                     quarterTurns: UtilLanguage.isRTL() ? 2 : 0,

@@ -55,7 +55,7 @@ class ReceiveMessage extends StatelessWidget {
                   child: item.type == Type.textMessage
                       ? Text(
                           item.message,
-                          style: Theme.of(context).textTheme.body1,
+                          style: Theme.of(context).textTheme.bodyText2,
                         )
                       : null,
                 ),
@@ -67,7 +67,7 @@ class ReceiveMessage extends StatelessWidget {
               'EEE MMM d yyyy',
               AppLanguage.defaultLanguage.languageCode,
             ).format(item.date),
-            style: Theme.of(context).textTheme.body2,
+            style: Theme.of(context).textTheme.bodyText1,
           ),
         ],
       ),

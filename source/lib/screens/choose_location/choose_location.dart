@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
 import 'package:felix_flutter/api/api.dart';
 import 'package:felix_flutter/models/model.dart';
 import 'package:felix_flutter/utils/other.dart';
 import 'package:felix_flutter/utils/utils.dart';
 import 'package:felix_flutter/widgets/widget.dart';
+import 'package:flutter/material.dart';
 
 class ChooseLocation extends StatefulWidget {
   final List<LocationModel> location;
@@ -101,7 +101,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
           textStyle: _locationSelected.contains(item)
               ? Theme.of(context)
                   .textTheme
-                  .subhead
+                  .subtitle1
                   .copyWith(color: Theme.of(context).primaryColor)
               : null,
           trailing: trailing,

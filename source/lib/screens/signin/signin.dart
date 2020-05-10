@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:felix_flutter/blocs/bloc.dart';
 import 'package:felix_flutter/configs/config.dart';
 import 'package:felix_flutter/utils/utils.dart';
 import 'package:felix_flutter/widgets/widget.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SignIn extends StatefulWidget {
   SignIn({Key key}) : super(key: key);
@@ -69,7 +69,7 @@ class _SignInState extends State<SignIn> {
           content: SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
-                Text(message, style: Theme.of(context).textTheme.body2),
+                Text(message, style: Theme.of(context).textTheme.bodyText1),
               ],
             ),
           ),

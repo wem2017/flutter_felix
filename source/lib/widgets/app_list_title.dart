@@ -38,7 +38,7 @@ class AppListTitle extends StatelessWidget {
               padding: EdgeInsets.only(top: 20, bottom: 20),
               child: Text(
                 title,
-                style: textStyle ?? Theme.of(context).textTheme.subhead,
+                style: textStyle ?? Theme.of(context).textTheme.subtitle1,
               ),
             ),
             trailing ?? Container()

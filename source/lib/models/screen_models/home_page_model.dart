@@ -6,6 +6,7 @@ class HomePageModel {
   final List<HotelModel> promotion;
   final List<TourModel> tour;
   final List<EventModel> event;
+  final List<HotelModel> list;
 
   HomePageModel(
     this.banner,
@@ -13,6 +14,7 @@ class HomePageModel {
     this.promotion,
     this.tour,
     this.event,
+    this.list,
   );
 
   factory HomePageModel.fromJson(Map<String, dynamic> json) {
@@ -21,6 +23,7 @@ class HomePageModel {
     final Iterable refactorPromotion = json['promotion'] ?? [];
     final Iterable refactorTour = json['tour'] ?? [];
     final Iterable refactorEvent = json['event'] ?? [];
+    final Iterable refactorList = json['list'] ?? [];
 
     final listBanner = refactorBanner.map((item) {
       return ImageModel.fromJson(item);
@@ -42,12 +45,17 @@ class HomePageModel {
       return EventModel.fromJson(item);
     }).toList();
 
+    final list = refactorList.map((item) {
+      return HotelModel.fromJson(item);
+    }).toList();
+
     return HomePageModel(
       listBanner,
       listCategory,
       listPromotion,
       listTour,
       listEvent,
+      list,
     );
   }
 }

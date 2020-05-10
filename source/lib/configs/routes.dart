@@ -27,6 +27,7 @@ class Routes {
   static const String fontSetting = "/fontSetting";
   static const String chooseLocation = "/chooseLocation";
   static const String hotel = "/hotel";
+  static const String hotelSearch = "/hotelSearch";
 
   Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -174,6 +175,14 @@ class Routes {
           builder: (context) {
             return Hotel();
           },
+        );
+
+      case hotelSearch:
+        return MaterialPageRoute(
+          builder: (context) {
+            return HotelSearch();
+          },
+          fullscreenDialog: true,
         );
 
       default:

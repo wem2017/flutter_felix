@@ -1,11 +1,11 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:felix_flutter/blocs/bloc.dart';
 import 'package:felix_flutter/configs/config.dart';
 import 'package:felix_flutter/utils/language.dart';
 import 'package:felix_flutter/utils/other.dart';
 import 'package:felix_flutter/utils/utils.dart';
 import 'package:felix_flutter/widgets/widget.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LanguageSetting extends StatefulWidget {
   LanguageSetting({Key key}) : super(key: key);
@@ -105,7 +105,7 @@ class _LanguageSettingState extends State<LanguageSetting> {
                     textStyle: item == _languageSelected
                         ? Theme.of(context)
                             .textTheme
-                            .subhead
+                            .subtitle1
                             .copyWith(color: Theme.of(context).primaryColor)
                         : null,
                     trailing: trailing,

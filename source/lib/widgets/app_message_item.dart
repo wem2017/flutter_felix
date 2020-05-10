@@ -109,7 +109,7 @@ class AppMessageItem extends StatelessWidget {
                             maxLines: 1,
                             style: Theme.of(context)
                                 .textTheme
-                                .subtitle
+                                .subtitle2
                                 .copyWith(fontWeight: FontWeight.w600),
                           ),
                         ),

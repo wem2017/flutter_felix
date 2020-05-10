@@ -33,7 +33,7 @@ class _HomeState extends State<Home> {
         Navigator.pushNamed(context, Routes.hotel);
         break;
       default:
-        _onChangeSort();
+        _onOpenMore();
     }
   }
 
@@ -48,7 +48,7 @@ class _HomeState extends State<Home> {
   }
 
   ///On Open More
-  void _onChangeSort() {
+  void _onOpenMore() {
     showModalBottomSheet<void>(
       backgroundColor: Colors.transparent,
       context: context,
@@ -67,7 +67,7 @@ class _HomeState extends State<Home> {
   Widget _buildPromotionToday() {
     if (_homePage?.promotion == null) {
       return ListView(
-        padding: EdgeInsets.only(left: 5, right: 20, top: 10, bottom: 3),
+        padding: EdgeInsets.only(left: 5, right: 20, top: 10, bottom: 2),
         scrollDirection: Axis.horizontal,
         children: List.generate(8, (index) => index).map(
           (item) {
@@ -81,7 +81,7 @@ class _HomeState extends State<Home> {
     }
 
     return ListView(
-      padding: EdgeInsets.only(left: 5, right: 20, top: 10, bottom: 3),
+      padding: EdgeInsets.only(left: 5, right: 20, top: 10, bottom: 2),
       scrollDirection: Axis.horizontal,
       children: _homePage.promotion.map(
         (item) {
@@ -101,7 +101,7 @@ class _HomeState extends State<Home> {
   Widget _buildTour() {
     if (_homePage?.tour == null) {
       return ListView(
-        padding: EdgeInsets.only(left: 5, right: 20, top: 10, bottom: 3),
+        padding: EdgeInsets.only(left: 5, right: 20, top: 10, bottom: 2),
         scrollDirection: Axis.horizontal,
         children: List.generate(8, (index) => index).map(
           (item) {
@@ -115,7 +115,7 @@ class _HomeState extends State<Home> {
     }
 
     return ListView(
-      padding: EdgeInsets.only(left: 5, right: 20, top: 10, bottom: 3),
+      padding: EdgeInsets.only(left: 5, right: 20, top: 10, bottom: 2),
       scrollDirection: Axis.horizontal,
       children: _homePage.tour.map(
         (item) {
@@ -136,7 +136,7 @@ class _HomeState extends State<Home> {
   Widget _buildEvent() {
     if (_homePage?.event == null) {
       return ListView(
-        padding: EdgeInsets.only(left: 5, right: 20, top: 10, bottom: 3),
+        padding: EdgeInsets.only(left: 5, right: 20, top: 10, bottom: 2),
         scrollDirection: Axis.horizontal,
         children: List.generate(8, (index) => index).map(
           (item) {
@@ -150,7 +150,7 @@ class _HomeState extends State<Home> {
     }
 
     return ListView(
-      padding: EdgeInsets.only(left: 5, right: 20, top: 10, bottom: 3),
+      padding: EdgeInsets.only(left: 5, right: 20, top: 10, bottom: 2),
       scrollDirection: Axis.horizontal,
       children: _homePage.event.map(
         (item) {
@@ -163,6 +163,47 @@ class _HomeState extends State<Home> {
           );
         },
       ).toList(),
+    );
+  }
+
+  ///List Product
+  Widget _buildList() {
+    if (_homePage?.list == null) {
+      ///Build Loading
+      return Wrap(
+        runSpacing: 15,
+        alignment: WrapAlignment.spaceBetween,
+        children: List.generate(8, (index) => index).map((item) {
+          return FractionallySizedBox(
+            widthFactor: 0.5,
+            child: Container(
+              padding: EdgeInsets.only(left: 15),
+              child: AppHotelItem(
+                type: HotelViewType.gird,
+              ),
+            ),
+          );
+        }).toList(),
+      );
+    }
+
+    ///Build list
+    return Wrap(
+      runSpacing: 15,
+      alignment: WrapAlignment.spaceBetween,
+      children: _homePage.list.map((item) {
+        return FractionallySizedBox(
+          widthFactor: 0.5,
+          child: Container(
+            padding: EdgeInsets.only(left: 15),
+            child: AppHotelItem(
+              onPressed: (item) {},
+              item: item,
+              type: HotelViewType.gird,
+            ),
+          ),
+        );
+      }).toList(),
     );
   }
 
@@ -180,88 +221,121 @@ class _HomeState extends State<Home> {
             ),
           ),
           SliverList(
-            delegate: SliverChildListDelegate([
-              Container(
-                padding: EdgeInsets.only(top: 16, left: 20, right: 20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      Translate.of(context).translate('promos_today'),
-                      style: Theme.of(context)
-                          .textTheme
-                          .title
-                          .copyWith(fontWeight: FontWeight.w600),
-                    ),
-                    Padding(padding: EdgeInsets.only(top: 3)),
-                    Text(
-                      Translate.of(context).translate('slogan_promos_today'),
-                      style: Theme.of(context).textTheme.body2,
-                    )
-                  ],
+            delegate: SliverChildListDelegate(
+              [
+                Container(
+                  padding: EdgeInsets.only(top: 15, left: 20, right: 20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        Translate.of(context).translate('promos_today'),
+                        style: Theme.of(context)
+                            .textTheme
+                            .headline6
+                            .copyWith(fontWeight: FontWeight.w600),
+                      ),
+                      Padding(padding: EdgeInsets.only(top: 3)),
+                      Text(
+                        Translate.of(context).translate('slogan_promos_today'),
+                        style: Theme.of(context).textTheme.bodyText1,
+                      )
+                    ],
+                  ),
                 ),
-              ),
-              Container(
-                height: 250,
-                child: _buildPromotionToday(),
-              ),
-              Container(
-                padding: EdgeInsets.only(
-                  left: 20,
-                  right: 20,
-                  top: 16,
+                Container(
+                  height: 250,
+                  child: _buildPromotionToday(),
                 ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      Translate.of(context).translate('tours'),
-                      style: Theme.of(context)
-                          .textTheme
-                          .title
-                          .copyWith(fontWeight: FontWeight.w600),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 3),
-                    ),
-                    Text(
-                      Translate.of(context).translate('slogan_tours'),
-                      style: Theme.of(context).textTheme.body2,
-                    ),
-                  ],
+                Container(
+                  padding: EdgeInsets.only(
+                    left: 20,
+                    right: 20,
+                    top: 15,
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        Translate.of(context).translate('tours'),
+                        style: Theme.of(context)
+                            .textTheme
+                            .headline6
+                            .copyWith(fontWeight: FontWeight.w600),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(top: 3),
+                      ),
+                      Text(
+                        Translate.of(context).translate('slogan_tours'),
+                        style: Theme.of(context).textTheme.bodyText1,
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              Container(
-                height: 160,
-                child: _buildTour(),
-              ),
-              Container(
-                padding: EdgeInsets.only(left: 20, right: 20, top: 16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      Translate.of(context).translate('event_coming_title'),
-                      style: Theme.of(context)
-                          .textTheme
-                          .title
-                          .copyWith(fontWeight: FontWeight.w600),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 3),
-                    ),
-                    Text(
-                      Translate.of(context).translate('slogan_event'),
-                      style: Theme.of(context).textTheme.body2,
-                    ),
-                  ],
+                Container(
+                  height: 160,
+                  child: _buildTour(),
                 ),
-              ),
-              Container(
-                height: 200,
-                child: _buildEvent(),
-              ),
-            ]),
+                Container(
+                  padding: EdgeInsets.only(left: 20, right: 20, top: 15),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        Translate.of(context).translate('event_coming_title'),
+                        style: Theme.of(context)
+                            .textTheme
+                            .headline6
+                            .copyWith(fontWeight: FontWeight.w600),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(top: 3),
+                      ),
+                      Text(
+                        Translate.of(context).translate('slogan_event'),
+                        style: Theme.of(context).textTheme.bodyText1,
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  height: 200,
+                  child: _buildEvent(),
+                ),
+                Container(
+                  padding: EdgeInsets.only(left: 20, right: 20, top: 15),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        Translate.of(context).translate('promotion'),
+                        style: Theme.of(context)
+                            .textTheme
+                            .headline6
+                            .copyWith(fontWeight: FontWeight.w600),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(top: 3),
+                      ),
+                      Text(
+                        Translate.of(context).translate('slogan_promotion'),
+                        style: Theme.of(context).textTheme.bodyText1,
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.only(
+                    left: 5,
+                    right: 20,
+                    top: 10,
+                    bottom: 15,
+                  ),
+                  child: _buildList(),
+                )
+              ],
+            ),
           )
         ],
       ),

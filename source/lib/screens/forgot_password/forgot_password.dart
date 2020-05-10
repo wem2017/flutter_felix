@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:felix_flutter/utils/utils.dart';
 import 'package:felix_flutter/widgets/widget.dart';
+import 'package:flutter/material.dart';
 
 class ForgotPassword extends StatefulWidget {
   ForgotPassword({Key key}) : super(key: key);
@@ -61,7 +61,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                     Translate.of(context).translate('email'),
                     style: Theme.of(context)
                         .textTheme
-                        .subtitle
+                        .subtitle2
                         .copyWith(fontWeight: FontWeight.w600),
                   ),
                 ),

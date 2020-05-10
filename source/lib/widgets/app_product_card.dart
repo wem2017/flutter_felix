@@ -61,12 +61,12 @@ class AppProductCard extends StatelessWidget {
                       item.subtitle,
                       style: Theme.of(context)
                           .textTheme
-                          .body1
+                          .bodyText2
                           .copyWith(color: Colors.white),
                     ),
                     Text(
                       item.title,
-                      style: Theme.of(context).textTheme.title.copyWith(
+                      style: Theme.of(context).textTheme.headline6.copyWith(
                             color: Colors.white,
                             fontWeight: FontWeight.w500,
                           ),
@@ -141,7 +141,7 @@ class AppProductCard extends StatelessWidget {
                   children: <Widget>[
                     Text(
                       item.title,
-                      style: Theme.of(context).textTheme.subhead.copyWith(
+                      style: Theme.of(context).textTheme.subtitle1.copyWith(
                             color: Colors.white,
                             fontWeight: FontWeight.w500,
                           ),

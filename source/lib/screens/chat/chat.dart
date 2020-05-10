@@ -113,7 +113,7 @@ class _ChatState extends State<Chat> {
                 _chatPage.roomName,
                 style: Theme.of(context)
                     .textTheme
-                    .subhead
+                    .subtitle1
                     .copyWith(color: Colors.white, fontWeight: FontWeight.w600),
                 overflow: TextOverflow.ellipsis,
                 maxLines: 1,
@@ -123,7 +123,7 @@ class _ChatState extends State<Chat> {
                       '${_chatPage.online > 1 ? _chatPage.online : ''} Online',
                       style: Theme.of(context)
                           .textTheme
-                          .subtitle
+                          .subtitle2
                           .apply(color: Theme.of(context).primaryColorLight),
                     )
                   : Container()
@@ -211,6 +211,7 @@ class _ChatState extends State<Chat> {
                     children: <Widget>[
                       IconButton(
                         icon: Icon(Icons.face),
+                        onPressed: () {},
                       ),
                       Expanded(
                         child: TextField(

@@ -1,10 +1,10 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:felix_flutter/blocs/bloc.dart';
 import 'package:felix_flutter/configs/config.dart';
 import 'package:felix_flutter/models/model.dart';
 import 'package:felix_flutter/utils/utils.dart';
 import 'package:felix_flutter/widgets/widget.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ThemeSetting extends StatefulWidget {
   ThemeSetting({Key key}) : super(key: key);
@@ -80,7 +80,7 @@ class _ThemeSettingState extends State<ThemeSetting> {
                                 ),
                                 Text(
                                   Translate.of(context).translate(item.name),
-                                  style: Theme.of(context).textTheme.subtitle,
+                                  style: Theme.of(context).textTheme.subtitle2,
                                 )
                               ],
                             ),

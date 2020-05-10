@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
 import 'package:felix_flutter/api/api.dart';
 import 'package:felix_flutter/models/model.dart';
 import 'package:felix_flutter/models/screen_models/screen_models.dart';
 import 'package:felix_flutter/utils/utils.dart';
+import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
 class AboutUs extends StatefulWidget {
@@ -73,7 +73,7 @@ class _AboutUsState extends State<AboutUs> {
 
     return Text(
       _aboutUsPage.whoWeAre,
-      style: Theme.of(context).textTheme.body2,
+      style: Theme.of(context).textTheme.bodyText1,
     );
   }
 
@@ -103,7 +103,7 @@ class _AboutUsState extends State<AboutUs> {
           padding: EdgeInsets.only(bottom: 3),
           child: Text(
             "$item",
-            style: Theme.of(context).textTheme.body2,
+            style: Theme.of(context).textTheme.bodyText1,
           ),
         );
       }).toList(),
@@ -173,7 +173,7 @@ class _AboutUsState extends State<AboutUs> {
                       ),
                       Text(
                         item.name,
-                        style: Theme.of(context).textTheme.subhead.copyWith(
+                        style: Theme.of(context).textTheme.subtitle1.copyWith(
                               color: Colors.white,
                               fontWeight: FontWeight.w600,
                             ),
@@ -225,7 +225,7 @@ class _AboutUsState extends State<AboutUs> {
                               Translate.of(context).translate('who_we_are'),
                               style: Theme.of(context)
                                   .textTheme
-                                  .subhead
+                                  .subtitle1
                                   .copyWith(fontWeight: FontWeight.w600),
                             ),
                           ),
@@ -236,7 +236,7 @@ class _AboutUsState extends State<AboutUs> {
                               Translate.of(context).translate('what_we_do'),
                               style: Theme.of(context)
                                   .textTheme
-                                  .subhead
+                                  .subtitle1
                                   .copyWith(fontWeight: FontWeight.w600),
                             ),
                           ),
@@ -255,7 +255,7 @@ class _AboutUsState extends State<AboutUs> {
                         Translate.of(context).translate('meet_our_team'),
                         style: Theme.of(context)
                             .textTheme
-                            .subhead
+                            .subtitle1
                             .copyWith(fontWeight: FontWeight.w600),
                       ),
                     ),

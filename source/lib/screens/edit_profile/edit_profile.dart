@@ -1,12 +1,12 @@
 import 'dart:io';
 
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:felix_flutter/blocs/bloc.dart';
 import 'package:felix_flutter/configs/config.dart';
 import 'package:felix_flutter/utils/utils.dart';
 import 'package:felix_flutter/widgets/widget.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:image_picker/image_picker.dart';
 
 class EditProfile extends StatefulWidget {
   EditProfile({Key key}) : super(key: key);
@@ -151,7 +151,7 @@ class _EditProfileState extends State<EditProfile> {
                       Translate.of(context).translate('name'),
                       style: Theme.of(context)
                           .textTheme
-                          .subtitle
+                          .subtitle2
                           .copyWith(fontWeight: FontWeight.w600),
                     ),
                   ),
@@ -189,7 +189,7 @@ class _EditProfileState extends State<EditProfile> {
                       Translate.of(context).translate('email'),
                       style: Theme.of(context)
                           .textTheme
-                          .subtitle
+                          .subtitle2
                           .copyWith(fontWeight: FontWeight.w600),
                     ),
                   ),
@@ -226,7 +226,7 @@ class _EditProfileState extends State<EditProfile> {
                       Translate.of(context).translate('address'),
                       style: Theme.of(context)
                           .textTheme
-                          .subtitle
+                          .subtitle2
                           .copyWith(fontWeight: FontWeight.w600),
                     ),
                   ),
@@ -264,7 +264,7 @@ class _EditProfileState extends State<EditProfile> {
                       Translate.of(context).translate('website'),
                       style: Theme.of(context)
                           .textTheme
-                          .subtitle
+                          .subtitle2
                           .copyWith(fontWeight: FontWeight.w600),
                     ),
                   ),
@@ -302,7 +302,7 @@ class _EditProfileState extends State<EditProfile> {
                       Translate.of(context).translate('information'),
                       style: Theme.of(context)
                           .textTheme
-                          .subtitle
+                          .subtitle2
                           .copyWith(fontWeight: FontWeight.w600),
                     ),
                   ),

@@ -166,7 +166,7 @@ class AppHotelItem extends StatelessWidget {
                   item.title,
                   style: Theme.of(context)
                       .textTheme
-                      .body2
+                      .bodyText1
                       .copyWith(fontWeight: FontWeight.w600),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
@@ -212,7 +212,7 @@ class AppHotelItem extends StatelessWidget {
                       item.price,
                       style: Theme.of(context)
                           .textTheme
-                          .title
+                          .headline6
                           .copyWith(color: Theme.of(context).primaryColor),
                     ),
                     Expanded(
@@ -375,7 +375,7 @@ class AppHotelItem extends StatelessWidget {
                         maxLines: 1,
                         style: Theme.of(context)
                             .textTheme
-                            .subhead
+                            .subtitle1
                             .copyWith(fontWeight: FontWeight.w600),
                       ),
                       Padding(
@@ -460,8 +460,11 @@ class AppHotelItem extends StatelessWidget {
                           children: <Widget>[
                             Text(
                               item.price,
-                              style: Theme.of(context).textTheme.title.copyWith(
-                                  color: Theme.of(context).primaryColor),
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .headline6
+                                  .copyWith(
+                                      color: Theme.of(context).primaryColor),
                             ),
                             Padding(
                               padding: EdgeInsets.only(left: 4, right: 4),
@@ -674,7 +677,7 @@ class AppHotelItem extends StatelessWidget {
                       maxLines: 1,
                       style: Theme.of(context)
                           .textTheme
-                          .subhead
+                          .subtitle1
                           .copyWith(fontWeight: FontWeight.w600),
                     ),
                     Padding(
@@ -724,8 +727,11 @@ class AppHotelItem extends StatelessWidget {
                         children: <Widget>[
                           Text(
                             item.price,
-                            style: Theme.of(context).textTheme.title.copyWith(
-                                color: Theme.of(context).primaryColor),
+                            style: Theme.of(context)
+                                .textTheme
+                                .headline6
+                                .copyWith(
+                                    color: Theme.of(context).primaryColor),
                           ),
                           Padding(
                             padding: EdgeInsets.only(left: 4, right: 4),

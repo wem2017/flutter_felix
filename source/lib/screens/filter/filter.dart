@@ -1,10 +1,10 @@
-import 'package:flutter/material.dart';
 import 'package:felix_flutter/configs/config.dart';
 import 'package:felix_flutter/models/model.dart';
 import 'package:felix_flutter/models/screen_models/filter_page_model.dart';
 import 'package:felix_flutter/utils/language.dart';
 import 'package:felix_flutter/utils/utils.dart';
 import 'package:felix_flutter/widgets/widget.dart';
+import 'package:flutter/material.dart';
 
 enum TimeType { start, end }
 
@@ -190,7 +190,7 @@ class _FilterState extends State<Filter> {
                               .toUpperCase(),
                           style: Theme.of(context)
                               .textTheme
-                              .title
+                              .headline6
                               .copyWith(fontWeight: FontWeight.w600),
                         ),
                       ),
@@ -227,7 +227,7 @@ class _FilterState extends State<Filter> {
                               .toUpperCase(),
                           style: Theme.of(context)
                               .textTheme
-                              .title
+                              .headline6
                               .copyWith(fontWeight: FontWeight.w600),
                         ),
                       ),
@@ -275,7 +275,7 @@ class _FilterState extends State<Filter> {
                                               .toUpperCase(),
                                           style: Theme.of(context)
                                               .textTheme
-                                              .title
+                                              .headline6
                                               .copyWith(
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -348,7 +348,7 @@ class _FilterState extends State<Filter> {
                                             .toUpperCase(),
                                         style: Theme.of(context)
                                             .textTheme
-                                            .title
+                                            .headline6
                                             .copyWith(
                                               fontWeight: FontWeight.w600,
                                             ),
@@ -407,7 +407,7 @@ class _FilterState extends State<Filter> {
                                   .toUpperCase(),
                               style: Theme.of(context)
                                   .textTheme
-                                  .title
+                                  .headline6
                                   .copyWith(fontWeight: FontWeight.w600),
                             ),
                             Padding(
@@ -458,11 +458,11 @@ class _FilterState extends State<Filter> {
                     children: <Widget>[
                       Text(
                         Translate.of(context).translate('avg_price'),
-                        style: Theme.of(context).textTheme.subtitle,
+                        style: Theme.of(context).textTheme.subtitle2,
                       ),
                       Text(
                         '${_rangeValues.start.round()}$_currency- ${_rangeValues.end.round()}$_currency',
-                        style: Theme.of(context).textTheme.subtitle,
+                        style: Theme.of(context).textTheme.subtitle2,
                       )
                     ],
                   ),
@@ -483,7 +483,7 @@ class _FilterState extends State<Filter> {
                               .toUpperCase(),
                           style: Theme.of(context)
                               .textTheme
-                              .title
+                              .headline6
                               .copyWith(fontWeight: FontWeight.w600),
                         ),
                       ),
@@ -529,7 +529,7 @@ class _FilterState extends State<Filter> {
                               .toUpperCase(),
                           style: Theme.of(context)
                               .textTheme
-                              .title
+                              .headline6
                               .copyWith(fontWeight: FontWeight.w600),
                         ),
                       ),
@@ -568,7 +568,7 @@ class _FilterState extends State<Filter> {
                                         "${_startHour.hour}:${_startHour.minute}",
                                         style: Theme.of(context)
                                             .textTheme
-                                            .subtitle,
+                                            .subtitle2,
                                       ),
                                     ],
                                   ),
@@ -602,7 +602,7 @@ class _FilterState extends State<Filter> {
                                           "${_endHour.hour}:${_endHour.minute}",
                                           style: Theme.of(context)
                                               .textTheme
-                                              .subtitle,
+                                              .subtitle2,
                                         ),
                                       ],
                                     ),
@@ -624,7 +624,7 @@ class _FilterState extends State<Filter> {
                               .toUpperCase(),
                           style: Theme.of(context)
                               .textTheme
-                              .title
+                              .headline6
                               .copyWith(fontWeight: FontWeight.w600),
                         ),
                       ),

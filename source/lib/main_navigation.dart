@@ -67,7 +67,7 @@ class _MainNavigationState extends State<MainNavigation> {
           content: SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
-                Text(message, style: Theme.of(context).textTheme.body2),
+                Text(message, style: Theme.of(context).textTheme.bodyText1),
               ],
             ),
           ),

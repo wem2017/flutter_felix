@@ -77,7 +77,7 @@ class AppEventCard extends StatelessWidget {
                             ).format(item.startTime),
                             style: Theme.of(context)
                                 .textTheme
-                                .subtitle
+                                .subtitle2
                                 .copyWith(
                                   fontWeight: FontWeight.bold,
                                   color: Theme.of(context).primaryColorLight,
@@ -88,7 +88,7 @@ class AppEventCard extends StatelessWidget {
                               'dd',
                               AppLanguage.defaultLanguage.languageCode,
                             ).format(item.startTime),
-                            style: Theme.of(context).textTheme.subtitle,
+                            style: Theme.of(context).textTheme.subtitle2,
                           )
                         ],
                       ),
@@ -104,7 +104,7 @@ class AppEventCard extends StatelessWidget {
                                   item.title,
                                   style: Theme.of(context)
                                       .textTheme
-                                      .body2
+                                      .bodyText1
                                       .copyWith(
                                         fontWeight: FontWeight.w600,
                                       ),

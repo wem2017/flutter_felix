@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:felix_flutter/models/model.dart';
 import 'package:felix_flutter/utils/utils.dart';
+import 'package:flutter/material.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:photo_view/photo_view_gallery.dart';
 
@@ -73,7 +73,7 @@ class _PhotoPreviewState extends State<PhotoPreview> {
               "${Translate.of(context).translate('image')} ${currentIndex + 1}",
               style: Theme.of(context)
                   .textTheme
-                  .subtitle
+                  .subtitle2
                   .copyWith(color: Colors.white, fontWeight: FontWeight.w500),
             ),
           )

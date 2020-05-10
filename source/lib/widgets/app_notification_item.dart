@@ -116,7 +116,7 @@ class AppNotificationItem extends StatelessWidget {
                           child: Text(
                             item.title,
                             maxLines: 1,
-                            style: Theme.of(context).textTheme.subtitle,
+                            style: Theme.of(context).textTheme.subtitle2,
                             overflow: TextOverflow.ellipsis,
                           ),
                         ),

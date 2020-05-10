@@ -1,10 +1,10 @@
+import 'package:felix_flutter/blocs/bloc.dart';
+import 'package:felix_flutter/configs/config.dart';
+import 'package:felix_flutter/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intro_views_flutter/Models/page_view_model.dart';
 import 'package:intro_views_flutter/intro_views_flutter.dart';
-import 'package:felix_flutter/blocs/bloc.dart';
-import 'package:felix_flutter/configs/config.dart';
-import 'package:felix_flutter/utils/utils.dart';
 
 class IntroPreview extends StatefulWidget {
   IntroPreview({Key key}) : super(key: key);
@@ -41,7 +41,7 @@ class _IntroPreviewState extends State<IntroPreview> {
         ),
         body: Text(
           "Favorite brands and hottest trends.",
-          style: Theme.of(context).textTheme.title.copyWith(
+          style: Theme.of(context).textTheme.headline6.copyWith(
                 color: Colors.white,
               ),
         ),
@@ -49,11 +49,11 @@ class _IntroPreviewState extends State<IntroPreview> {
           Translate.of(context).translate('shopping'),
           style: Theme.of(context)
               .textTheme
-              .display1
+              .headline4
               .copyWith(color: Colors.white),
         ),
-        titleTextStyle: Theme.of(context).textTheme.display1,
-        bodyTextStyle: Theme.of(context).textTheme.title,
+        titleTextStyle: Theme.of(context).textTheme.headline4,
+        bodyTextStyle: Theme.of(context).textTheme.headline6,
         mainImage: Image.asset(
           Images.Intro1,
           fit: BoxFit.contain,
@@ -67,18 +67,20 @@ class _IntroPreviewState extends State<IntroPreview> {
         ),
         body: Text(
           Translate.of(context).translate('shopping_intro'),
-          style:
-              Theme.of(context).textTheme.title.copyWith(color: Colors.white),
+          style: Theme.of(context)
+              .textTheme
+              .headline6
+              .copyWith(color: Colors.white),
         ),
         title: Text(
           Translate.of(context).translate('payment'),
           style: Theme.of(context)
               .textTheme
-              .display1
+              .headline4
               .copyWith(color: Colors.white),
         ),
-        titleTextStyle: Theme.of(context).textTheme.display1,
-        bodyTextStyle: Theme.of(context).textTheme.title,
+        titleTextStyle: Theme.of(context).textTheme.headline4,
+        bodyTextStyle: Theme.of(context).textTheme.headline6,
         mainImage: Image.asset(
           Images.Intro2,
           fit: BoxFit.contain,
@@ -92,18 +94,20 @@ class _IntroPreviewState extends State<IntroPreview> {
         ),
         body: Text(
           Translate.of(context).translate('payment_intro'),
-          style:
-              Theme.of(context).textTheme.title.copyWith(color: Colors.white),
+          style: Theme.of(context)
+              .textTheme
+              .headline6
+              .copyWith(color: Colors.white),
         ),
         title: Text(
           Translate.of(context).translate('location'),
           style: Theme.of(context)
               .textTheme
-              .display1
+              .headline4
               .copyWith(color: Colors.white),
         ),
-        titleTextStyle: Theme.of(context).textTheme.display1,
-        bodyTextStyle: Theme.of(context).textTheme.title,
+        titleTextStyle: Theme.of(context).textTheme.headline4,
+        bodyTextStyle: Theme.of(context).textTheme.headline6,
         mainImage: Image.asset(
           Images.Intro3,
           fit: BoxFit.contain,

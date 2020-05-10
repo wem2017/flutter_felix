@@ -74,7 +74,7 @@ class Api {
   static Future<dynamic> getDetailMessage({int id}) async {
     await Future.delayed(Duration(seconds: 1));
     final result =
-        await UtilAsset.loadJson("assets/data/message_detail_${id}.json");
+        await UtilAsset.loadJson("assets/data/message_detail_$id.json");
     return ResultApiModel.fromJson(result);
   }
 

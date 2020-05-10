@@ -12,6 +12,7 @@ export 'forgot_password/forgot_password.dart';
 export 'gallery/gallery.dart';
 export 'home/home.dart';
 export 'hotel/hotel.dart';
+export 'hotel_search/hotel_search.dart';
 export 'intro_preview/intro_preview.dart';
 export 'language_setting/language_setting.dart';
 export 'loading/loading.dart';

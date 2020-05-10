@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:felix_flutter/utils/utils.dart';
+import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
 class AppProfilePerformance extends StatelessWidget {
@@ -60,7 +60,7 @@ class AppProfilePerformance extends StatelessWidget {
               children: <Widget>[
                 Text(
                   item['value'],
-                  style: Theme.of(context).textTheme.subtitle,
+                  style: Theme.of(context).textTheme.subtitle2,
                 ),
                 Text(
                   Translate.of(context).translate(

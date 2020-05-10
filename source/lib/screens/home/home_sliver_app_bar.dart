@@ -50,9 +50,6 @@ class AppBarHomeSliver extends SliverPersistentHeaderDelegate {
                         padding: EdgeInsets.only(left: 8, right: 8, top: 8),
                         child: FlatButton(
                           padding: EdgeInsets.all(0),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
                           onPressed: () {
                             Navigator.pushNamed(context, Routes.searchHistory);
                           },
@@ -78,7 +75,7 @@ class AppBarHomeSliver extends SliverPersistentHeaderDelegate {
                                   ),
                                   style: Theme.of(context)
                                       .textTheme
-                                      .subhead
+                                      .subtitle1
                                       .copyWith(fontWeight: FontWeight.w600),
                                 ),
                               ],

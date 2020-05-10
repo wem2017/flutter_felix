@@ -66,7 +66,7 @@ class _AppModalBottomSheetState extends State<AppModalBottomSheet> {
                         textStyle: item.code == _currentSort.code
                             ? Theme.of(context)
                                 .textTheme
-                                .subhead
+                                .subtitle1
                                 .copyWith(color: Theme.of(context).primaryColor)
                             : null,
                         trailing: item.code == _currentSort.code
