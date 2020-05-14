@@ -16,4 +16,5 @@ export 'app_rating.dart';
 export 'app_star_rating.dart';
 export 'app_tag.dart';
 export 'app_text_input.dart';
+export 'app_time_picker.dart';
 export 'app_user_info.dart';

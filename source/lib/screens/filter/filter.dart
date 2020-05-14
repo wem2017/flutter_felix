@@ -6,8 +6,6 @@ import 'package:felix_flutter/utils/utils.dart';
 import 'package:felix_flutter/widgets/widget.dart';
 import 'package:flutter/material.dart';
 
-enum TimeType { start, end }
-
 class Filter extends StatefulWidget {
   Filter({Key key}) : super(key: key);
 
@@ -69,30 +67,6 @@ class _FilterState extends State<Filter> {
   Future<void> _onClearTapped() async {
     await Future.delayed(Duration(milliseconds: 100));
     _textController.text = '';
-  }
-
-  ///Show Picker Time
-  Future<void> _showTimePicker(BuildContext context, TimeType type) async {
-    final picked = await showTimePicker(
-      initialTime: TimeOfDay.now(),
-      context: context,
-      builder: (BuildContext context, Widget child) {
-        return MediaQuery(
-          data: MediaQuery.of(context).copyWith(alwaysUse24HourFormat: true),
-          child: child,
-        );
-      },
-    );
-    if (type == TimeType.start && picked != null) {
-      setState(() {
-        _startHour = picked;
-      });
-    }
-    if (type == TimeType.end && picked != null) {
-      setState(() {
-        _endHour = picked;
-      });
-    }
   }
 
   ///On Navigate Filter location
@@ -533,85 +507,19 @@ class _FilterState extends State<Filter> {
                               .copyWith(fontWeight: FontWeight.w600),
                         ),
                       ),
-                      Container(
-                        padding: EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                          color: Theme.of(context).dividerColor,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(8),
-                          ),
-                        ),
-                        child: IntrinsicHeight(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
-                              Expanded(
-                                child: InkWell(
-                                  onTap: () {
-                                    _showTimePicker(context, TimeType.start);
-                                  },
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: <Widget>[
-                                      Text(
-                                        Translate.of(context).translate(
-                                          'start_time',
-                                        ),
-                                        style:
-                                            Theme.of(context).textTheme.caption,
-                                      ),
-                                      SizedBox(
-                                        height: 3,
-                                      ),
-                                      Text(
-                                        "${_startHour.hour}:${_startHour.minute}",
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .subtitle2,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              VerticalDivider(
-                                color: Theme.of(context).disabledColor,
-                              ),
-                              Expanded(
-                                child: Container(
-                                  child: InkWell(
-                                    onTap: () {
-                                      _showTimePicker(context, TimeType.end);
-                                    },
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: <Widget>[
-                                        Text(
-                                          Translate.of(context).translate(
-                                            'end_time',
-                                          ),
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .caption,
-                                        ),
-                                        SizedBox(
-                                          height: 3,
-                                        ),
-                                        Text(
-                                          "${_endHour.hour}:${_endHour.minute}",
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .subtitle2,
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
+                      AppTimePicker(
+                        startHour: _startHour,
+                        endHour: _endHour,
+                        onChangeStartHour: (time) {
+                          setState(() {
+                            _startHour = time;
+                          });
+                        },
+                        onChangeEndHour: (time) {
+                          setState(() {
+                            _endHour = time;
+                          });
+                        },
                       ),
                       Padding(
                         padding: EdgeInsets.only(

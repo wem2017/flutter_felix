@@ -333,7 +333,7 @@ class _HomeState extends State<Home> {
                     bottom: 15,
                   ),
                   child: _buildList(),
-                )
+                ),
               ],
             ),
           )

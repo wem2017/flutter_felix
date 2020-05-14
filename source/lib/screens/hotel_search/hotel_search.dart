@@ -1,4 +1,5 @@
 import 'package:felix_flutter/utils/utils.dart';
+import 'package:felix_flutter/widgets/widget.dart';
 import 'package:flutter/material.dart';
 
 class HotelSearch extends StatefulWidget {
@@ -12,7 +13,9 @@ class HotelSearch extends StatefulWidget {
 
 class _HotelSearchState extends State<HotelSearch> {
   final _textController = TextEditingController();
-  String _currency = String.fromCharCode(0x24);
+
+  TimeOfDay _startHour = TimeOfDay(hour: 12, minute: 15);
+  TimeOfDay _endHour = TimeOfDay(hour: 18, minute: 10);
 
   @override
   void initState() {
@@ -37,9 +40,38 @@ class _HotelSearchState extends State<HotelSearch> {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.only(top: 15, bottom: 15),
+            padding: EdgeInsets.only(
+              top: 15,
+              bottom: 15,
+              left: 20,
+              right: 20,
+            ),
             child: Column(
-              children: <Widget>[],
+              children: <Widget>[
+                AppTextInput(
+                  hintText: Translate.of(context).translate('search'),
+                  onTapIcon: _onClearTapped,
+                  icon: Icon(Icons.clear),
+                  controller: _textController,
+                ),
+                Padding(
+                  padding: EdgeInsets.only(top: 15),
+                ),
+                AppTimePicker(
+                  startHour: _startHour,
+                  endHour: _endHour,
+                  onChangeStartHour: (time) {
+                    setState(() {
+                      _startHour = time;
+                    });
+                  },
+                  onChangeEndHour: (time) {
+                    setState(() {
+                      _endHour = time;
+                    });
+                  },
+                ),
+              ],
             ),
           ),
         ),
