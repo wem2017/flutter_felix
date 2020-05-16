@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -26,10 +26,18 @@
                                     <constraint firstAttribute="width" constant="120" id="nG3-He-AqQ"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Felix Flux" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iuz-B8-Ha7">
+                                <rect key="frame" x="151.5" y="516" width="111" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.89803921568627454" green="0.38823529411764707" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Iuz-B8-Ha7" firstAttribute="centerX" secondItem="DPQ-Q6-gfn" secondAttribute="centerX" id="1IH-eB-HQD"/>
                             <constraint firstItem="Agb-uh-Ypf" firstAttribute="centerY" secondItem="DPQ-Q6-gfn" secondAttribute="centerY" id="FY9-Av-UUl"/>
+                            <constraint firstItem="Iuz-B8-Ha7" firstAttribute="top" secondItem="Agb-uh-Ypf" secondAttribute="bottom" constant="8" id="SQ6-Ug-7kH"/>
                             <constraint firstItem="Agb-uh-Ypf" firstAttribute="centerX" secondItem="DPQ-Q6-gfn" secondAttribute="centerX" id="o5T-Kx-LBM"/>
                         </constraints>
                     </view>
@@ -40,6 +48,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icon" width="512" height="512"/>
+        <image name="icon" width="173" height="155"/>
     </resources>
 </document>

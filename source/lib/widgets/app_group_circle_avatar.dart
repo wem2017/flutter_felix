@@ -247,7 +247,7 @@ class AppGroupCircleAvatar extends StatelessWidget {
                             style: Theme.of(context)
                                 .textTheme
                                 .caption
-                                .copyWith(fontWeight: FontWeight.bold),
+                                .copyWith(fontWeight: FontWeight.bold,color: Colors.white),
                           ),
                         ),
                       )

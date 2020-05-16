@@ -1,6 +1,5 @@
 export 'aboutus_page_model.dart';
 export 'booking_history_page_model.dart';
-export 'category_page_model.dart';
 export 'chat_page_model.dart';
 export 'filter_page_model.dart';
 export 'home_page_model.dart';

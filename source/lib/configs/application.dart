@@ -3,6 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class Application {
   static bool debug = true;
+  static String appName = 'Felix Flux';
   static String version = '1.0.0';
   static SharedPreferences preferences;
   static UserModel user;
